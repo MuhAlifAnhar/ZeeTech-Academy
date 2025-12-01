@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Stack Web Development - ZeeTech Academy</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+
+    <style>
+    
+      /* Course Hero */
+      .course-hero {
+        padding: 140px 0 60px;
+        background: linear-gradient(
+          180deg,
+          rgba(139, 92, 246, 0.05) 0%,
+          transparent 100%
+        );
+      }
+
+      .breadcrumb {
+        background: transparent;
+        padding: 0;
+        margin-bottom: 2rem;
+      }
+
+      .breadcrumb-item a {
+        color: var(--text-secondary);
+        text-decoration: none;
+      }
+
+      .breadcrumb-item.active {
+        color: var(--text-primary);
+      }
+
+      .course-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.4rem 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--border-color);
+        border-radius: 99px;
+        font-size: 0.85rem;
+        margin-bottom: 1.5rem;
+        color: #8b5cf6;
+        font-weight: 600;
+      }
+
+      .course-hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .course-hero .lead {
+        font-size: 1.2rem;
+        max-width: 700px;
+      }
+
+      .course-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-secondary);
+      }
+
+      .meta-item i {
+        color: #8b5cf6;
+      }
+
+      /* Content Cards */
+      .course-content {
+        padding: 4rem 0;
+      }
+
+      .content-card {
+        background: var(--surface-color);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        transition: all 0.3s ease;
+      }
+
+      .content-card:hover {
+        border-color: rgba(139, 92, 246, 0.3);
+      }
+
+      .content-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .features-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .features-list li {
+        margin-bottom: 1rem;
+        color: var(--text-secondary);
+        display: flex;
+        align-items: start;
+        gap: 0.75rem;
+      }
+
+      .features-list li i {
+        color: #10b981;
+        margin-top: 0.25rem;
+        flex-shrink: 0;
+      }
+
+      /* Modules */
+      .module-item {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        margin-bottom: 1rem;
+        overflow: hidden;
+      }
+
+      .module-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .module-header:hover {
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .module-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.25rem;
+        color: var(--text-primary);
+      }
+
+      .module-duration {
+        color: var(--text-secondary);
+        font-size: 0.85rem;
+      }
+
+      .lesson-list {
+        padding: 0 1.5rem 1.5rem;
+        list-style: none;
+        display: none;
+      }
+
+      .lesson-list li {
+        padding: 0.75rem 0;
+        color: var(--text-secondary);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .lesson-list li:last-child {
+        border-bottom: none;
+      }
+
+      .lesson-list i {
+        color: #8b5cf6;
+      }
+
+      /* Skills Tags */
+      .skills-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .skill-tag {
+        background: rgba(139, 92, 246, 0.1);
+        border: 1px solid rgba(139, 92, 246, 0.3);
+        color: #8b5cf6;
+        padding: 0.5rem 1rem;
+        border-radius: 99px;
+        font-size: 0.85rem;
+        font-weight: 500;
+      }
+
+      /* Instructor Card */
+      .instructor-card {
+        display: flex;
+        gap: 1.5rem;
+        align-items: start;
+      }
+
+      .instructor-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: var(--primary-gradient);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+
+      .instructor-info h4 {
+        font-size: 1.25rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .instructor-role {
+        color: #8b5cf6;
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+      }
+
+      /* Pricing Sidebar */
+      .sidebar-sticky {
+        position: sticky;
+        top: 100px;
+      }
+
+      .pricing-card {
+        background: var(--surface-color);
+        border: 1px solid var(--border-color);
+        border-radius: 24px;
+        padding: 2.5rem;
+        text-align: center;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .pricing-card.featured {
+        background: linear-gradient(
+          180deg,
+          rgba(139, 92, 246, 0.1) 0%,
+          var(--surface-color) 100%
+        );
+        border-color: rgba(139, 92, 246, 0.3);
+      }
+
+      .discount-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+        color: white;
+        padding: 0.4rem 0.8rem;
+        border-radius: 99px;
+        font-size: 0.75rem;
+        font-weight: 700;
+      }
+
+      .price-original {
+        text-decoration: line-through;
+        color: var(--text-secondary);
+        font-size: 1rem;
+      }
+
+      .price-tag {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin: 1rem 0;
+        background: var(--primary-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <i class="fas fa-code text-gradient me-2"></i>ZeeTech Academy
+        </a>
+        <button
+          class="navbar-toggler navbar-dark"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#home">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about">Tentang Kami</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#courses">Kursus</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#portfolio">Portofolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#pricing">Harga</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a href="index.html#contact" class="btn btn-primary-custom"
+                >Daftar Sekarang</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Course Hero -->
+    <section class="course-hero">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="index.html#courses">Courses</a>
+            </li>
+            <li class="breadcrumb-item active">Full Stack Web Development</li>
+          </ol>
+        </nav>
+
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="course-badge">
+              <i class="fas fa-fire me-2"></i>MOST POPULAR
+            </div>
+            <h1>Full Stack Web Development Bootcamp</h1>
+            <p class="lead text-secondary">
+              Kuasai web development dari frontend hingga backend. Bangun
+              aplikasi web modern dengan HTML, CSS, JavaScript, Laravel, React,
+              dan Node.js.
+            </p>
+
+            <div class="course-meta">
+              <div class="meta-item">
+                <i class="fas fa-clock"></i>
+                <span><strong>12 Minggu</strong> Program</span>
+              </div>
+              <div class="meta-item">
+                <i class="fas fa-signal"></i>
+                <span><strong>Pemula - Advanced</strong></span>
+              </div>
+              <div class="meta-item">
+                <i class="fas fa-users"></i>
+                <span><strong>250+</strong> Alumni</span>
+              </div>
+              <div class="meta-item">
+                <i class="fas fa-star"></i>
+                <span><strong>4.9/5</strong> Rating</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="course-content">
+      <div class="container">
+        <div class="row">
+          <!-- Left Column -->
+          <div class="col-lg-8">
+            <!-- Yang Akan Dipelajari -->
+            <div class="content-card">
+              <h3>
+                <i class="fas fa-graduation-cap text-gradient me-2"></i>Yang
+                Akan Kamu Pelajari
+              </h3>
+              <div class="row">
+                <div class="col-md-6">
+                  <ul class="features-list">
+                    <li>
+                      <i class="fas fa-check-circle"></i> HTML5 & CSS3 Modern
+                    </li>
+                    <li><i class="fas fa-check-circle"></i> JavaScript ES6+</li>
+                    <li>
+                      <i class="fas fa-check-circle"></i> React.js & Redux
+                    </li>
+                    <li>
+                      <i class="fas fa-check-circle"></i> Node.js & Express
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul class="features-list">
+                    <li>
+                      <i class="fas fa-check-circle"></i> PHP & Laravel
+                      Framework
+                    </li>
+                    <li><i class="fas fa-check-circle"></i> MySQL</li>
+                    <li>
+                      <i class="fas fa-check-circle"></i> RESTful API Design
+                    </li>
+                    <li><i class="fas fa-check-circle"></i> Git & GitHub</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Deskripsi -->
+            <div class="content-card">
+              <h3>
+                <i class="fas fa-info-circle text-gradient me-2"></i>Tentang
+                Program Ini
+              </h3>
+              <p class="text-secondary">
+                Program bootcamp intensif selama 12 minggu yang dirancang untuk
+                mengubah Anda menjadi Full Stack Web Developer profesional. Anda
+                akan belajar membangun aplikasi web modern dari nol hingga
+                deployment.
+              </p>
+              <p class="text-secondary">
+                Kurikulum kami disesuaikan dengan kebutuhan industri terkini,
+                menggunakan teknologi dan framework yang paling banyak digunakan
+                oleh perusahaan-perusahaan teknologi terkemuka.
+              </p>
+
+              <h5 class="mt-4 mb-3">Kenapa Memilih Program Ini?</h5>
+              <ul class="features-list">
+                <li>
+                  <i class="fas fa-check-circle"></i> Pembelajaran project-based
+                  dengan 5+ portofolio nyata
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Mentoring langsung dari
+                  praktisi berpengalaman 10+ tahun
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Live coding sessions
+                  setiap minggu
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Career support & job
+                  placement assistance
+                </li>
+                <li>
+                  <i class="fas fa-check-circle"></i> Akses lifetime ke materi
+                  dan update terbaru
+                </li>
+              </ul>
+            </div>
+
+            <!-- Kurikulum -->
+            <div class="content-card">
+              <h3>
+                <i class="fas fa-book text-gradient me-2"></i>Kurikulum Program
+              </h3>
+
+              <div class="module-item">
+                <div class="module-header">
+                  <div>
+                    <h5 class="module-title">Module 1: Web Fundamentals</h5>
+                    <small class="module-duration">3 Minggu • 18 Lessons</small>
+                  </div>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="lesson-list">
+                  <li>
+                    <i class="fas fa-play-circle"></i> HTML5 Semantics &
+                    Structure
+                  </li>
+                  <li>
+                    <i class="fas fa-play-circle"></i> CSS3 Flexbox & Grid
+                  </li>
+                  <li>
+                    <i class="fas fa-play-circle"></i> Responsive Design
+                    Principles
+                  </li>
+                  <li>
+                    <i class="fas fa-play-circle"></i> Bootstrap Framework
+                  </li>
+                  <li>
+                    <i class="fas fa-play-circle"></i> Project: Landing Page
+                    Portofolio
+                  </li>
+                </ul>
+              </div>
+
+              <div class="module-item">
+                <div class="module-header">
+                  <div>
+                    <h5 class="module-title">Module 2: JavaScript Mastery</h5>
+                    <small class="module-duration">3 Minggu • 20 Lessons</small>
+                  </div>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="lesson-list">
+                  <li>
+                    <i class="fas fa-play-circle"></i> JavaScript ES6+ Features
+                  </li>
+                  <li><i class="fas fa-play-circle"></i> DOM Manipulation</li>
+                  <li>
+                    <i class="fas fa-play-circle"></i> Async/Await & Promises
+                  </li>
+                  <li><i class="fas fa-play-circle"></i> Fetch API & AJAX</li>
+                  <li>
+                    <i class="fas fa-play-circle"></i> Project: Interactive Web
+                    App
+                  </li>
+                </ul>
+              </div>
+
+              <div class="module-item">
+                <div class="module-header">
+                  <div>
+                    <h5 class="module-title">Module 3: React.js Development</h5>
+                    <small class="module-duration">3 Minggu • 22 Lessons</small>
+                  </div>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="lesson-list">
+                  <li>
+                    <i class="fas fa-play-circle"></i> React Components & Props
+                  </li>
+                  <li>
+                    <i class="fas fa-play-circle"></i> State Management with
+                    Hooks
+                  </li>
+                  <li><i class="fas fa-play-circle"></i> React Router</li>
+                  <li>
+                    <i class="fas fa-play-circle"></i> Redux State Management
+                  </li>
+                  <li>
+                    <i class="fas fa-play-circle"></i> Project: E-Commerce
+                    Frontend
+                  </li>
+                </ul>
+              </div>
+
+              <div class="module-item">
+                <div class="module-header">
+                  <div>
+                    <h5 class="module-title">Module 4: Backend & Database</h5>
+                    <small class="module-duration">3 Minggu • 24 Lessons</small>
+                  </div>
+                  <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="lesson-list">
+                  <li>
+                    <i class="fas fa-play-circle"></i> Node.js & Express Setup
+                  </li>
+                  <li>
+                    <i class="fas fa-play-circle"></i> RESTful API Development
+                  </li>
+                  <li>
+                    <i class="fas fa-play-circle"></i> PHP Laravel Framework
+                  </li>
+                  <li>
+                    <i class="fas fa-play-circle"></i> MySQL & Database Design
+                  </li>
+                  <li>
+                    <i class="fas fa-play-circle"></i> Authentication &
+                    Authorization
+                  </li>
+                  <li>
+                    <i class="fas fa-play-circle"></i> Final Project: Full Stack
+                    Application
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="content-card">
+              <h3>
+                <i class="fas fa-code text-gradient me-2"></i>Tech Stack & Tools
+              </h3>
+              <div class="skills-tags">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">React.js</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Laravel</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">MongoDB</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">REST API</span>
+                <span class="skill-tag">Bootstrap</span>
+                <span class="skill-tag">Tailwind CSS</span>
+              </div>
+            </div>
+
+            <!-- Instruktur -->
+            <div class="content-card">
+              <h3>
+                <i class="fas fa-user-tie text-gradient me-2"></i>Instruktur
+              </h3>
+              <div class="instructor-card">
+                <div class="instructor-avatar">AR</div>
+                <div class="instructor-info">
+                  <h4>Ahmad Rahman</h4>
+                  <p class="instructor-role">Senior Full Stack Developer</p>
+                  <p class="text-secondary mb-0">
+                    10+ tahun pengalaman di perusahaan teknologi multinasional.
+                    Spesialisasi dalam Web Development dan Software
+                    Architecture.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Sidebar -->
+          <div class="col-lg-4">
+            <div class="sidebar-sticky">
+              <div class="pricing-card featured">
+                <div class="discount-badge">
+                  <i class="fas fa-bolt me-1"></i> HEMAT 40%
+                </div>
+                <p class="price-original mb-0">Rp 5.000.000</p>
+                <div class="price-tag">Rp 2.500.000</div>
+                <p class="text-secondary mb-3">
+                  Promo Early Bird hingga 31 Des 2025
+                </p>
+
+                <button class="btn-primary-custom w-100 mb-3">
+                  <i class="fas fa-shopping-cart me-2"></i>Daftar Sekarang
+                </button>
+
+                <ul class="features-list text-start">
+                  <li><i class="fas fa-check"></i> Akses Materi Lifetime</li>
+                  <li><i class="fas fa-check"></i> 12 Minggu Live Sessions</li>
+                  <li><i class="fas fa-check"></i> 5+ Project Portofolio</li>
+                  <li><i class="fas fa-check"></i> Mentoring 1-on-1</li>
+                  <li><i class="fas fa-check"></i> Career Support</li>
+                  <li><i class="fas fa-check"></i> Sertifikat Resmi</li>
+                  <li><i class="fas fa-check"></i> Job Placement Assist</li>
+                  <li><i class="fas fa-check"></i> Komunitas Alumni</li>
+                </ul>
+
+                <div
+                  class="mt-4 pt-3 border-top border-secondary border-opacity-25"
+                >
+                  <p class="text-secondary mb-2">
+                    <i class="fas fa-calendar-alt me-2"></i
+                    ><strong>Batch Berikutnya:</strong>
+                  </p>
+                  <p class="text-white mb-0">15 Januari 2025</p>
+                  <p class="text-secondary mt-3">
+                    <small
+                      ><i class="fas fa-users me-2"></i>Sisa 8 kursi
+                      tersedia</small
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <div class="content-card mt-3 text-center">
+                <p class="text-secondary mb-3">Ada pertanyaan?</p>
+                <a
+                  href="https://wa.me/6281234567890"
+                  class="btn btn-outline-custom w-100"
+                >
+                  <i class="fab fa-whatsapp me-2"></i>Chat via WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <a href="#" class="footer-brand text-gradient">ZeeTech Academy</a>
+            <p class="text-secondary mb-4">
+              Pusat pelatihan IT dan skill digital terdepan. Mencetak talenta
+              digital siap kerja dengan kurikulum standar industri.
+            </p>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-secondary fs-5"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-secondary fs-5"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" class="text-secondary fs-5"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="#" class="text-secondary fs-5"
+                ><i class="fab fa-tiktok"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <div class="footer-links">
+              <h5>Program</h5>
+              <ul>
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">Mobile Apps</a></li>
+                <li><a href="#">UI/UX Design</a></li>
+                <li><a href="#">Digital Marketing</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <div class="footer-links">
+              <h5>Perusahaan</h5>
+              <ul>
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Karir</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Kontak</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-links">
+              <h5>Hubungi Kami</h5>
+              <ul>
+                <li>
+                  <i class="fas fa-map-marker-alt me-2"></i> Jl. Teknologi No.
+                  123, Jakarta
+                </li>
+                <li><i class="fas fa-envelope me-2"></i> info@zeetech.id</li>
+                <li><i class="fas fa-phone me-2"></i> +62 812-3456-7890</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row mt-5 pt-4 border-top border-secondary border-opacity-10"
+        >
+          <div class="col-md-6 text-center text-md-start text-secondary">
+            &copy; 2025 ZeeTech Academy. All rights reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end text-secondary">
+            <a href="#" class="text-secondary text-decoration-none me-3"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-secondary text-decoration-none"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const moduleHeaders = document.querySelectorAll(".module-header");
+
+        moduleHeaders.forEach((header) => {
+          header.addEventListener("click", function () {
+            const lessonList = this.nextElementSibling;
+            const icon = this.querySelector("i");
+
+            if (lessonList.style.display === "block") {
+              lessonList.style.display = "none";
+              icon.classList.remove("fa-chevron-up");
+              icon.classList.add("fa-chevron-down");
+            } else {
+              lessonList.style.display = "block";
+              icon.classList.remove("fa-chevron-down");
+              icon.classList.add("fa-chevron-up");
+            }
+          });
+        });
+
+        document.querySelectorAll(".lesson-list").forEach((list) => {
+          list.style.display = "none";
+        });
+
+        const registerBtn = document.querySelector(".btn-primary-custom");
+        if (registerBtn) {
+          registerBtn.addEventListener("click", function () {
+            const courseName = document.querySelector("h1").textContent;
+            const coursePrice =
+              document.querySelector(".price-tag").textContent;
+
+            if (
+              confirm(
+                `Anda akan mendaftar kursus:\n\n${courseName}\n\nHarga: ${coursePrice}\n\nLanjutkan pendaftaran?`
+              )
+            ) {
+              alert(
+                "Pendaftaran berhasil! Anda akan diarahkan ke halaman pembayaran."
+              );
+            }
+          });
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
