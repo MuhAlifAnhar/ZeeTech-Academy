@@ -27,9 +27,7 @@
 
     <link rel="stylesheet" href="assets/css/style.css" />
 
-
     <style>
-    
       /* Course Hero */
       .course-hero {
         padding: 140px 0 60px;
@@ -290,10 +288,10 @@
         font-size: 2.5rem;
         font-weight: 800;
         margin: 1rem 0;
-        background: var(--primary-gradient);
-        -webkit-text-fill-color: transparent;
+        color: white;
+        /* background: var(--primary-gradient); */
+        /* -webkit-text-fill-color: transparent; */
       }
-
     </style>
   </head>
   <body>
@@ -347,39 +345,24 @@
             <li class="breadcrumb-item">
               <a href="index.html#courses">Courses</a>
             </li>
-            <li class="breadcrumb-item active">Full Stack Web Development</li>
+            <li class="breadcrumb-item active" id="breadcrumb-title">
+              Loading...
+            </li>
           </ol>
         </nav>
 
         <div class="row">
           <div class="col-lg-8">
-            <div class="course-badge">
-              <i class="fas fa-fire me-2"></i>MOST POPULAR
+            <div class="course-badge" id="course-badge">
+              <i class="fas fa-fire me-2"></i>LOADING...
             </div>
-            <h1>Full Stack Web Development Bootcamp</h1>
-            <p class="lead text-secondary">
-              Kuasai web development dari frontend hingga backend. Bangun
-              aplikasi web modern dengan HTML, CSS, JavaScript, Laravel, React,
-              dan Node.js.
+            <h1 id="course-title">Loading...</h1>
+            <p class="lead text-secondary" id="course-description">
+              Loading...
             </p>
 
-            <div class="course-meta">
-              <div class="meta-item">
-                <i class="fas fa-clock"></i>
-                <span><strong>12 Minggu</strong> Program</span>
-              </div>
-              <div class="meta-item">
-                <i class="fas fa-signal"></i>
-                <span><strong>Pemula - Advanced</strong></span>
-              </div>
-              <div class="meta-item">
-                <i class="fas fa-users"></i>
-                <span><strong>250+</strong> Alumni</span>
-              </div>
-              <div class="meta-item">
-                <i class="fas fa-star"></i>
-                <span><strong>4.9/5</strong> Rating</span>
-              </div>
+            <div class="course-meta" id="course-meta">
+              <!-- Meta akan diisi via JavaScript -->
             </div>
           </div>
         </div>
@@ -390,7 +373,7 @@
     <section class="course-content">
       <div class="container">
         <div class="row">
-          <!-- Left Column -->
+          <!-- Left Column - Course Info -->
           <div class="col-lg-8">
             <!-- Yang Akan Dipelajari -->
             <div class="content-card">
@@ -398,78 +381,20 @@
                 <i class="fas fa-graduation-cap text-gradient me-2"></i>Yang
                 Akan Kamu Pelajari
               </h3>
-              <div class="row">
-                <div class="col-md-6">
-                  <ul class="features-list">
-                    <li>
-                      <i class="fas fa-check-circle"></i> HTML5 & CSS3 Modern
-                    </li>
-                    <li><i class="fas fa-check-circle"></i> JavaScript ES6+</li>
-                    <li>
-                      <i class="fas fa-check-circle"></i> React.js & Redux
-                    </li>
-                    <li>
-                      <i class="fas fa-check-circle"></i> Node.js & Express
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-md-6">
-                  <ul class="features-list">
-                    <li>
-                      <i class="fas fa-check-circle"></i> PHP & Laravel
-                      Framework
-                    </li>
-                    <li><i class="fas fa-check-circle"></i> MySQL</li>
-                    <li>
-                      <i class="fas fa-check-circle"></i> RESTful API Design
-                    </li>
-                    <li><i class="fas fa-check-circle"></i> Git & GitHub</li>
-                  </ul>
-                </div>
+              <div class="row" id="learning-points">
+                <!-- Akan diisi via JavaScript -->
               </div>
             </div>
 
-            <!-- Deskripsi -->
+            <!-- Deskripsi Course -->
             <div class="content-card">
               <h3>
                 <i class="fas fa-info-circle text-gradient me-2"></i>Tentang
                 Program Ini
               </h3>
-              <p class="text-secondary">
-                Program bootcamp intensif selama 12 minggu yang dirancang untuk
-                mengubah Anda menjadi Full Stack Web Developer profesional. Anda
-                akan belajar membangun aplikasi web modern dari nol hingga
-                deployment.
-              </p>
-              <p class="text-secondary">
-                Kurikulum kami disesuaikan dengan kebutuhan industri terkini,
-                menggunakan teknologi dan framework yang paling banyak digunakan
-                oleh perusahaan-perusahaan teknologi terkemuka.
-              </p>
-
-              <h5 class="mt-4 mb-3">Kenapa Memilih Program Ini?</h5>
-              <ul class="features-list">
-                <li>
-                  <i class="fas fa-check-circle"></i> Pembelajaran project-based
-                  dengan 5+ portofolio nyata
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Mentoring langsung dari
-                  praktisi berpengalaman 10+ tahun
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Live coding sessions
-                  setiap minggu
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Career support & job
-                  placement assistance
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Akses lifetime ke materi
-                  dan update terbaru
-                </li>
-              </ul>
+              <div id="about-content">
+                <!-- Akan diisi via JavaScript -->
+              </div>
             </div>
 
             <!-- Kurikulum -->
@@ -477,139 +402,18 @@
               <h3>
                 <i class="fas fa-book text-gradient me-2"></i>Kurikulum Program
               </h3>
-
-              <div class="module-item">
-                <div class="module-header">
-                  <div>
-                    <h5 class="module-title">Module 1: Web Fundamentals</h5>
-                    <small class="module-duration">3 Minggu • 18 Lessons</small>
-                  </div>
-                  <i class="fas fa-chevron-down"></i>
-                </div>
-                <ul class="lesson-list">
-                  <li>
-                    <i class="fas fa-play-circle"></i> HTML5 Semantics &
-                    Structure
-                  </li>
-                  <li>
-                    <i class="fas fa-play-circle"></i> CSS3 Flexbox & Grid
-                  </li>
-                  <li>
-                    <i class="fas fa-play-circle"></i> Responsive Design
-                    Principles
-                  </li>
-                  <li>
-                    <i class="fas fa-play-circle"></i> Bootstrap Framework
-                  </li>
-                  <li>
-                    <i class="fas fa-play-circle"></i> Project: Landing Page
-                    Portofolio
-                  </li>
-                </ul>
-              </div>
-
-              <div class="module-item">
-                <div class="module-header">
-                  <div>
-                    <h5 class="module-title">Module 2: JavaScript Mastery</h5>
-                    <small class="module-duration">3 Minggu • 20 Lessons</small>
-                  </div>
-                  <i class="fas fa-chevron-down"></i>
-                </div>
-                <ul class="lesson-list">
-                  <li>
-                    <i class="fas fa-play-circle"></i> JavaScript ES6+ Features
-                  </li>
-                  <li><i class="fas fa-play-circle"></i> DOM Manipulation</li>
-                  <li>
-                    <i class="fas fa-play-circle"></i> Async/Await & Promises
-                  </li>
-                  <li><i class="fas fa-play-circle"></i> Fetch API & AJAX</li>
-                  <li>
-                    <i class="fas fa-play-circle"></i> Project: Interactive Web
-                    App
-                  </li>
-                </ul>
-              </div>
-
-              <div class="module-item">
-                <div class="module-header">
-                  <div>
-                    <h5 class="module-title">Module 3: React.js Development</h5>
-                    <small class="module-duration">3 Minggu • 22 Lessons</small>
-                  </div>
-                  <i class="fas fa-chevron-down"></i>
-                </div>
-                <ul class="lesson-list">
-                  <li>
-                    <i class="fas fa-play-circle"></i> React Components & Props
-                  </li>
-                  <li>
-                    <i class="fas fa-play-circle"></i> State Management with
-                    Hooks
-                  </li>
-                  <li><i class="fas fa-play-circle"></i> React Router</li>
-                  <li>
-                    <i class="fas fa-play-circle"></i> Redux State Management
-                  </li>
-                  <li>
-                    <i class="fas fa-play-circle"></i> Project: E-Commerce
-                    Frontend
-                  </li>
-                </ul>
-              </div>
-
-              <div class="module-item">
-                <div class="module-header">
-                  <div>
-                    <h5 class="module-title">Module 4: Backend & Database</h5>
-                    <small class="module-duration">3 Minggu • 24 Lessons</small>
-                  </div>
-                  <i class="fas fa-chevron-down"></i>
-                </div>
-                <ul class="lesson-list">
-                  <li>
-                    <i class="fas fa-play-circle"></i> Node.js & Express Setup
-                  </li>
-                  <li>
-                    <i class="fas fa-play-circle"></i> RESTful API Development
-                  </li>
-                  <li>
-                    <i class="fas fa-play-circle"></i> PHP Laravel Framework
-                  </li>
-                  <li>
-                    <i class="fas fa-play-circle"></i> MySQL & Database Design
-                  </li>
-                  <li>
-                    <i class="fas fa-play-circle"></i> Authentication &
-                    Authorization
-                  </li>
-                  <li>
-                    <i class="fas fa-play-circle"></i> Final Project: Full Stack
-                    Application
-                  </li>
-                </ul>
+              <div id="curriculum-content">
+                <!-- Akan diisi via JavaScript -->
               </div>
             </div>
 
-            <!-- Tech Stack -->
+            <!-- Skills yang Didapat -->
             <div class="content-card">
               <h3>
                 <i class="fas fa-code text-gradient me-2"></i>Tech Stack & Tools
               </h3>
-              <div class="skills-tags">
-                <span class="skill-tag">HTML5</span>
-                <span class="skill-tag">CSS3</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">React.js</span>
-                <span class="skill-tag">Node.js</span>
-                <span class="skill-tag">Laravel</span>
-                <span class="skill-tag">MySQL</span>
-                <span class="skill-tag">MongoDB</span>
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">REST API</span>
-                <span class="skill-tag">Bootstrap</span>
-                <span class="skill-tag">Tailwind CSS</span>
+              <div class="skills-tags" id="skills-tags">
+                <!-- Akan diisi via JavaScript -->
               </div>
             </div>
 
@@ -618,42 +422,39 @@
               <h3>
                 <i class="fas fa-user-tie text-gradient me-2"></i>Instruktur
               </h3>
-              <div class="instructor-card">
-                <div class="instructor-avatar">AR</div>
-                <div class="instructor-info">
-                  <h4>Ahmad Rahman</h4>
-                  <p class="instructor-role">Senior Full Stack Developer</p>
-                  <p class="text-secondary mb-0">
-                    10+ tahun pengalaman di perusahaan teknologi multinasional.
-                    Spesialisasi dalam Web Development dan Software
-                    Architecture.
-                  </p>
-                </div>
+              <div class="instructor-card" id="instructor-card">
+                <!-- Akan diisi via JavaScript -->
               </div>
             </div>
           </div>
 
-          <!-- Right Sidebar -->
+          <!-- Right Column - Pricing Sidebar -->
           <div class="col-lg-4">
             <div class="sidebar-sticky">
               <div class="pricing-card featured">
-                <div class="discount-badge">
-                  <i class="fas fa-bolt me-1"></i> HEMAT 40%
+                <div class="discount-badge" id="discount-badge">
+                  <i class="fas fa-bolt me-1"></i> LOADING
                 </div>
-                <p class="price-original mb-0">Rp 5.000.000</p>
-                <div class="price-tag">Rp 2.500.000</div>
-                <p class="text-secondary mb-3">
+                <p class="price-original mb-0" id="price-original">Rp 0</p>
+                <div class="price-tag" id="price-current">Rp 0</div>
+                <p class="text-secondary mb-0">
                   Promo Early Bird hingga 31 Des 2025
                 </p>
 
-                <button class="btn-primary-custom w-100 mb-3">
-                  <i class="fas fa-shopping-cart me-2"></i>Daftar Sekarang
+                <button class="btn-primary-custom my-3">
+                  <i class="fas fa-shopping-cart me-2 "></i>Daftar Sekarang
                 </button>
 
-                <ul class="features-list text-start">
+                <ul class="features-list">
                   <li><i class="fas fa-check"></i> Akses Materi Lifetime</li>
-                  <li><i class="fas fa-check"></i> 12 Minggu Live Sessions</li>
-                  <li><i class="fas fa-check"></i> 5+ Project Portofolio</li>
+                  <li>
+                    <i class="fas fa-check"></i>
+                    <span id="duration-weeks">0</span> Live Sessions
+                  </li>
+                  <li>
+                    <i class="fas fa-check"></i>
+                    <span id="project-count">0</span> Project Portofolio
+                  </li>
                   <li><i class="fas fa-check"></i> Mentoring 1-on-1</li>
                   <li><i class="fas fa-check"></i> Career Support</li>
                   <li><i class="fas fa-check"></i> Sertifikat Resmi</li>
@@ -682,7 +483,7 @@
                 <p class="text-secondary mb-3">Ada pertanyaan?</p>
                 <a
                   href="https://wa.me/6281234567890"
-                  class="btn btn-outline-custom w-100"
+                  class="btn btn-outline-success w-100"
                 >
                   <i class="fab fa-whatsapp me-2"></i>Chat via WhatsApp
                 </a>
@@ -722,10 +523,10 @@
             <div class="footer-links">
               <h5>Program</h5>
               <ul>
-                <li><a href="#">Web Development</a></li>
-                <li><a href="#">Mobile Apps</a></li>
-                <li><a href="#">UI/UX Design</a></li>
-                <li><a href="#">Digital Marketing</a></li>
+                <li><a href="course.html?id=web-development">Web Development</a></li>
+                <li><a href="course.html?id=mobile-development">Mobile Apps</a></li>
+                <li><a href="course.html?id=ui-ux-design">UI/UX Design</a></li>
+                <li><a href="course.html?id=office-admin">Digital Office Admin</a></li>
               </ul>
             </div>
           </div>
@@ -773,6 +574,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/course-data.js"></script>
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const moduleHeaders = document.querySelectorAll(".module-header");
@@ -833,6 +636,156 @@
           });
         });
       });
+
+      // Get course ID from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const courseId = urlParams.get("id") || "web-development";
+
+      // Get course data
+      const course = coursesData[courseId];
+
+      if (!course) {
+        alert("Course not found!");
+        window.location.href = "index.html";
+      }
+
+      // Populate Hero Section
+      document.getElementById("breadcrumb-title").textContent = course.title;
+      document.getElementById(
+        "course-badge"
+      ).innerHTML = `<i class="fas fa-${course.badgeIcon} me-2"></i>${course.badge}`;
+      document.getElementById("course-badge").style.color = course.badgeColor;
+      document.getElementById("course-badge").style.borderColor =
+        course.badgeColor + "50";
+      document.getElementById("course-title").textContent = course.title;
+      document.getElementById("course-description").textContent =
+        course.description;
+
+      // Populate Meta
+      const metaHTML = `
+            <div class="meta-item">
+                <i class="fas fa-clock"></i>
+                <span><strong>${course.duration}</strong></span>
+            </div>
+            <div class="meta-item">
+                <i class="fas fa-signal"></i>
+                <span><strong>${course.level}</strong></span>
+            </div>
+            <div class="meta-item">
+                <i class="fas fa-users"></i>
+                <span><strong>${course.alumni}</strong> Alumni</span>
+            </div>
+            <div class="meta-item">
+                <i class="fas fa-star"></i>
+                <span><strong>${course.rating}</strong> Rating</span>
+            </div>
+        `;
+      document.getElementById("course-meta").innerHTML = metaHTML;
+
+      // Populate Learning Points
+      const halfLength = Math.ceil(course.learningPoints.length / 2);
+      const col1 = course.learningPoints.slice(0, halfLength);
+      const col2 = course.learningPoints.slice(halfLength);
+
+      const learningHTML = `
+            <div class="col-md-6">
+                <ul class="features-list">
+                    ${col1
+                      .map(
+                        (point) =>
+                          `<li><i class="fas fa-check-circle"></i> ${point}</li>`
+                      )
+                      .join("")}
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="features-list">
+                    ${col2
+                      .map(
+                        (point) =>
+                          `<li><i class="fas fa-check-circle"></i> ${point}</li>`
+                      )
+                      .join("")}
+                </ul>
+            </div>
+        `;
+      document.getElementById("learning-points").innerHTML = learningHTML;
+
+      // Populate About Content
+      const aboutHTML = `
+            <p class="text-secondary">${course.aboutProgram.intro}</p>
+            <p class="text-secondary">${course.aboutProgram.industry}</p>
+            <h5 class="mt-4 mb-3">Kenapa Memilih Program Ini ?</h5>
+            <ul class="features-list">
+                ${course.aboutProgram.whyChoose
+                  .map(
+                    (reason) =>
+                      `<li><i class="fas fa-check-circle"></i> ${reason}</li>`
+                  )
+                  .join("")}
+            </ul>
+        `;
+      document.getElementById("about-content").innerHTML = aboutHTML;
+
+      // Populate Curriculum
+      const curriculumHTML = course.curriculum
+        .map(
+          (module) => `
+            <div class="module-item">
+                <div class="module-header">
+                    <div>
+                        <h5 class="module-title">${module.title}</h5>
+                        <small class="module-duration">${module.duration} • ${
+            module.lessons
+          } Lessons</small>
+                    </div>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <ul class="lesson-list">
+                    ${module.topics
+                      .map(
+                        (topic) =>
+                          `<li><i class="fas fa-play-circle"></i> ${topic}</li>`
+                      )
+                      .join("")}
+                </ul>
+            </div>
+        `
+        )
+        .join("");
+      document.getElementById("curriculum-content").innerHTML = curriculumHTML;
+
+      // Populate Skills Tags
+      const skillsHTML = course.skills
+        .map((skill) => `<span class="skill-tag">${skill}</span>`)
+        .join("");
+      document.getElementById("skills-tags").innerHTML = skillsHTML;
+
+      // Populate Instructor
+      const instructorHTML = `
+            <div class="instructor-avatar">${course.instructor.avatar}</div>
+            <div class="instructor-info">
+                <h4>${course.instructor.name}</h4>
+                <p class="instructor-role">${course.instructor.role}</p>
+                <p class="text-secondary mb-0">${course.instructor.bio}</p>
+            </div>
+        `;
+      document.getElementById("instructor-card").innerHTML = instructorHTML;
+
+      // Populate Pricing
+      document.getElementById(
+        "discount-badge"
+      ).innerHTML = `<i class="fas fa-bolt me-1"></i> HEMAT ${course.pricing.discount}`;
+      document.getElementById("price-original").textContent =
+        course.pricing.originalPrice;
+      document.getElementById("price-current").textContent =
+        course.pricing.currentPrice;
+      document.getElementById("duration-weeks").textContent = course.duration;
+      document.getElementById("project-count").textContent =
+        course.projectCount + "+";
+
+      // Update page title
+      document.title = `${course.title} - ZeeTech Academy`;
     </script>
   </body>
 </html>
