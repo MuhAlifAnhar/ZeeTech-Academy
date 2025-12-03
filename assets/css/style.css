@@ -18,7 +18,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700;
     letter-spacing: -0.02em;
 }
@@ -57,7 +62,8 @@ h1, h2, h3, h4, h5, h6 {
     transition: color 0.2s ease;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
     color: #fff !important;
 }
 
@@ -89,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-outline-custom:hover {
     border-color: #fff;
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     color: #fff;
 }
 
@@ -169,7 +175,7 @@ h1, h2, h3, h4, h5, h6 {
 .feature-card:hover {
     transform: translateY(-5px);
     border-color: rgba(139, 92, 246, 0.3);
-    box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
 }
 
 .feature-card img {
@@ -177,7 +183,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 200px;
     object-fit: contain;
     margin-bottom: 1.5rem;
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
     transition: transform 0.3s ease;
 }
 
@@ -284,9 +290,17 @@ footer {
 
 /* Animations */
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .floating-element {
@@ -368,4 +382,46 @@ footer {
     color: var(--text-secondary);
     padding: 1.5rem;
     border-top: 1px solid var(--border-color);
+}
+
+/* Floating WhatsApp Button */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    animation: pulse-whatsapp 2s infinite;
+}
+
+.floating-whatsapp:hover {
+    background-color: #128c7e;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+@keyframes pulse-whatsapp {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
 }
