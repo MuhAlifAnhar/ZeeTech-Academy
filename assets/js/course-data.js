@@ -103,9 +103,9 @@ const coursesData = {
     },
     
     pricing: {
-      originalPrice: "Rp 3.000.000",
+      originalPrice: "Rp 2.000.000",
       currentPrice: "Rp 1.500.000",
-      discount: "50%"
+      discount: "25%"
     }
   },
 
