@@ -116,7 +116,7 @@ const coursesData = {
     badgeIcon: "mobile-alt",
     badgeColor: "#3b82f6",
     description: "Buat aplikasi mobile Android & iOS dengan Flutter. Satu codebase untuk dua platform sekaligus dengan performa native.",
-    duration: "10 Minggu",
+    duration: "16 Pertemuan",
     level: "Pemula - Intermediate",
     alumni: "180+",
     rating: "4.8/5",
@@ -134,7 +134,7 @@ const coursesData = {
     ],
     
     aboutProgram: {
-      intro: "Program komprehensif 10 minggu untuk menguasai pengembangan aplikasi mobile cross-platform menggunakan Flutter. Dari konsep dasar hingga publish app ke store.",
+      intro: "Program komprehensif 16 pertemuan untuk menguasai pengembangan aplikasi mobile cross-platform menggunakan Flutter. Dari konsep dasar hingga publish app ke store.",
       industry: "Flutter adalah framework pilihan untuk startup dan perusahaan besar karena efisiensi development dan performa yang excellent. Dengan satu codebase, Anda bisa deploy ke Android dan iOS.",
       whyChoose: [
         "Build 4+ aplikasi mobile portfolio-ready",
@@ -210,9 +210,9 @@ const coursesData = {
     },
     
     pricing: {
-      originalPrice: "Rp 3.000.000",
+      originalPrice: "Rp 2.000.000",
       currentPrice: "Rp 1.500.000",
-      discount: "50%"
+      discount: "25%"
     }
   },
 
@@ -223,7 +223,7 @@ const coursesData = {
     badgeIcon: "palette",
     badgeColor: "#8b5cf6",
     description: "Pelajari desain antarmuka dan pengalaman pengguna dari nol. Kuasai Figma, wireframing, prototyping, dan prinsip desain user-centric yang modern.",
-    duration: "8 Minggu",
+    duration: "8 Pertemuan",
     level: "Pemula - Advanced",
     alumni: "200+",
     rating: "4.9/5",
@@ -241,7 +241,7 @@ const coursesData = {
     ],
     
     aboutProgram: {
-      intro: "Program 8 minggu intensif yang mengajarkan Anda cara membuat desain yang tidak hanya indah, tetapi juga fungsional dan user-friendly. Dari research hingga final design.",
+      intro: "Program 8 pertemuan intensif yang mengajarkan Anda cara membuat desain yang tidak hanya indah, tetapi juga fungsional dan user-friendly. Dari research hingga final design.",
       industry: "UI/UX Designer adalah salah satu profesi paling dicari di industri digital. Kurikulum kami mencakup metodologi design thinking dan best practices yang digunakan di perusahaan tech global.",
       whyChoose: [
         "6+ project desain untuk portfolio profesional",
@@ -317,9 +317,9 @@ const coursesData = {
     },
     
     pricing: {
-      originalPrice: "Rp 2.000.000",
+      originalPrice: "Rp 1.500.000",
       currentPrice: "Rp 1.000.000",
-      discount: "50%"
+      discount: "25%"
     }
   },
 
@@ -330,7 +330,7 @@ const coursesData = {
     badgeIcon: "network-wired",
     badgeColor: "#10b981",
     description: "Master jaringan komputer, konfigurasi Mikrotik, dan manajemen infrastruktur IT. Persiapan untuk sertifikasi MTCNA.",
-    duration: "8 Minggu",
+    duration: "8 Pertemuan",
     level: "Pemula - Advanced",
     alumni: "150+",
     rating: "4.7/5",
@@ -348,7 +348,7 @@ const coursesData = {
     ],
     
     aboutProgram: {
-      intro: "Program 8 minggu yang komprehensif untuk menguasai administrasi jaringan dan Mikrotik. Cocok untuk IT support, network engineer, atau yang ingin membangun career di bidang networking.",
+      intro: "Program 8 pertemuan yang komprehensif untuk menguasai administrasi jaringan dan Mikrotik. Cocok untuk IT support, network engineer, atau yang ingin membangun career di bidang networking.",
       industry: "Network administrator dan Mikrotik specialist sangat dicari oleh ISP, perusahaan IT, dan berbagai industri yang membutuhkan infrastruktur jaringan yang handal.",
       whyChoose: [
         "Hands-on practice dengan real equipment",
@@ -424,9 +424,9 @@ const coursesData = {
     },
     
     pricing: {
-      originalPrice: "Rp 3.000.000",
-      currentPrice: "Rp 1.500.000",
-      discount: "50%"
+      originalPrice: "Rp 1.500.000",
+      currentPrice: "Rp 1.000.000",
+      discount: "25%"
     }
   },
 
@@ -437,7 +437,7 @@ const coursesData = {
     badgeIcon: "paint-brush",
     badgeColor: "#f59e0b",
     description: "Kuasai CorelDRAW dan Canva untuk kebutuhan branding, desain konten sosial media, dan material marketing yang menarik.",
-    duration: "6 Minggu",
+    duration: "16 Pertemuan",
     level: "Pemula - Intermediate",
     alumni: "220+",
     rating: "4.8/5",
@@ -455,7 +455,7 @@ const coursesData = {
     ],
     
     aboutProgram: {
-      intro: "Program 6 minggu untuk menguasai tools desain grafis yang paling banyak digunakan dalam industri kreatif. Fokus pada practical skills untuk kebutuhan bisnis dan personal branding.",
+      intro: "Program 16 pertemuan untuk menguasai tools desain grafis yang paling banyak digunakan dalam industri kreatif. Fokus pada practical skills untuk kebutuhan bisnis dan personal branding.",
       industry: "Graphic designer dan content creator adalah profesi yang sangat fleksibel - bisa bekerja sebagai freelancer, in-house designer, atau membangun agency sendiri.",
       whyChoose: [
         "8+ desain portfolio siap pakai",
@@ -531,9 +531,9 @@ const coursesData = {
     },
     
     pricing: {
-      originalPrice: "Rp 2.000.000",
-      currentPrice: "Rp 1.000.000",
-      discount: "50%"
+      originalPrice: "Rp 2.500.000",
+      currentPrice: "Rp 2.000.000",
+      discount: "25%"
     }
   },
 
@@ -543,8 +543,8 @@ const coursesData = {
     badge: "ESSENTIAL",
     badgeIcon: "briefcase",
     badgeColor: "#06b6d4",
-    description: "Google Workspace (Docs, Sheets, Slides, Drive) dan Microsoft Office untuk produktivitas kerja maksimal. Perfect untuk admin dan office worker.",
-    duration: "4 Minggu",
+    description: "Google Workspace (Docs, Sheets, Form, Drive) dan Microsoft Office untuk produktivitas kerja maksimal. Perfect untuk admin dan office worker.",
+    duration: "16 Pertemuan",
     level: "Pemula - Intermediate",
     alumni: "300+",
     rating: "4.6/5",
@@ -562,7 +562,7 @@ const coursesData = {
     ],
     
     aboutProgram: {
-      intro: "Program 4 minggu yang praktis dan langsung applicable untuk meningkatkan produktivitas kerja Anda. Cocok untuk staff admin, secretary, atau siapa saja yang bekerja dengan dokumen dan data.",
+      intro: "Program 16 pertemuan yang praktis dan langsung applicable untuk meningkatkan produktivitas kerja Anda. Cocok untuk staff admin, secretary, atau siapa saja yang bekerja dengan dokumen dan data.",
       industry: "Skill office administration yang solid adalah foundation penting di berbagai industri. Program ini akan membuat Anda 10x lebih produktif dalam pekerjaan sehari-hari.",
       whyChoose: [
         "Materi praktis langsung bisa diterapkan",
@@ -638,9 +638,9 @@ const coursesData = {
     },
     
     pricing: {
-      originalPrice: "Rp 3.000.000",
+      originalPrice: "Rp 2.000.000",
       currentPrice: "Rp 1.500.000",
-      discount: "50%"
+      discount: "25%"
     }
   }
 };
