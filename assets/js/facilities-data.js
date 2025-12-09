@@ -1,84 +1,85 @@
 // facilities-data.js
 // Data dan logic untuk menampilkan fasilitas ZeeTech Academy
+// hehe hi gantenk.
 
 const facilitiesData = [
   {
     id: 1,
     image: "assets/img/fasilitas (1).jpg",
-    title: "Ruang Kelas Modern",
-    description: "Kelas ber-AC dengan kapasitas maksimal 15 siswa untuk pembelajaran yang nyaman"
+    title: "Parkiran Nyaman & Aman",
+    description: "Area parkir luas dengan akses mudah untuk motor dan mobil."
   },
   {
     id: 2,
     image: "assets/img/fasilitas (2).jpg",
-    title: "Komputer Spesifikasi Tinggi",
-    description: "Setiap siswa mendapat 1 unit PC/Laptop dengan spesifikasi untuk development"
+    title: "Ruang Belajar Ber-AC",
+    description: "Kelas berkapasitas 15 siswa dengan AC dan tata ruang yang rapi."
   },
   {
     id: 3,
     image: "assets/img/fasilitas (3).jpg",
-    title: "Internet Fiber 100 Mbps",
-    description: "Koneksi internet super cepat untuk mendukung pembelajaran dan riset"
+    title: "Ruang Belajar Nyaman",
+    description: "Lingkungan belajar dibuat tenang dan nyaman untuk menjaga fokus siswa."
   },
   {
     id: 4,
     image: "assets/img/fasilitas (4).jpg",
-    title: "Proyektor HD",
-    description: "Layar proyektor besar untuk presentasi dan live coding sessions"
+    title: "Desain Kelas Modern",
+    description: "Penataan meja dan kursi ergonomis menciptakan suasana belajar profesional."
   },
   {
     id: 5,
     image: "assets/img/fasilitas (5).jpg",
-    title: "Area Diskusi",
-    description: "Ruang santai untuk diskusi kelompok dan brainstorming"
+    title: "Komputer Berperforma Tinggi",
+    description: "Setiap komputer memiliki spesifikasi mumpuni untuk kebutuhan belajar teknologi."
   },
   {
     id: 6,
     image: "assets/img/fasilitas (6).jpg",
-    title: "Perpustakaan Digital",
-    description: "Akses ke ribuan e-book dan video tutorial premium"
+    title: "Area Presentasi Lengkap",
+    description: "Dilengkapi proyektor dan papan presentasi untuk penyampaian materi yang efektif."
   },
   {
     id: 7,
     image: "assets/img/fasilitas (7).jpg",
-    title: "Coffee Corner",
-    description: "Kopi gratis dan snack untuk menemani belajar"
+    title: "Pencahayaan Ruang Optimal",
+    description: "Ruang belajar terang dan nyaman untuk mendukung konsentrasi."
   },
   {
     id: 8,
     image: "assets/img/fasilitas (8).jpg",
-    title: "Free Parking",
-    description: "Area parkir luas dan aman untuk motor dan mobil"
+    title: "Didukung UPS",
+    description: "Setiap perangkat memiliki UPS agar pembelajaran tetap berjalan saat listrik padam."
   },
   {
     id: 9,
     image: "assets/img/fasilitas (9).jpg",
-    title: "Whiteboard Digital",
-    description: "Smart board untuk menjelaskan konsep dengan lebih interaktif"
+    title: "WiFi Berkecepatan Tinggi",
+    description: "Akses internet cepat dan stabil untuk menunjang pembelajaran digital."
   },
   {
     id: 10,
     image: "assets/img/fasilitas (10).jpg",
-    title: "Ruang Praktek",
-    description: "Lab khusus untuk project-based learning"
+    title: "Fasilitas Pelatihan Menjahit",
+    description: "Dilengkapi mesin menjahit dan alat pendukung untuk pelatihan keterampilan."
   },
   {
     id: 11,
     image: "assets/img/fasilitas (11).jpg",
-    title: "Musholla",
-    description: "Tempat ibadah yang nyaman untuk siswa muslim"
+    title: "Peralatan Menjahit Lengkap",
+    description: "Setiap siswa dapat menggunakan peralatan menjahit standar pelatihan."
   },
   {
     id: 12,
     image: "assets/img/fasilitas (12).jpg",
-    title: "Toilet Bersih",
-    description: "Fasilitas toilet yang selalu dijaga kebersihannya"
+    title: "Ruang Praktek Menjahit",
+    description: "Lingkungan praktek tertata rapi untuk kenyamanan belajar menjahit."
   },
   {
     id: 13,
     image: "assets/img/fasilitas (13).jpg",
-    title: "Security 24/7",
-    description: "Keamanan terjaga dengan sistem CCTV dan petugas keamanan"
+    title: "Parkiran Luas",
+    description: "Area parkir yang mampu menampung lebih banyak kendaraan."
   }
 ];
 
