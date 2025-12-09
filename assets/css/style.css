@@ -436,6 +436,67 @@ footer {
     overflow: hidden;
 }
 
+/* Carousel Container */
+.facilities-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.facilities-carousel-wrapper {
+    position: relative;
+    overflow: visible;
+}
+
+.facilities-track {
+    display: flex;
+    gap: 1.5%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.facility-slide {
+    flex: 0 0 32%;
+    min-width: 32%;
+    max-width: 32%;
+}
+
+/* Navigation Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    font-size: 1.2rem;
+}
+
+.carousel-btn:hover {
+    background: var(--primary-gradient);
+    border-color: transparent;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 20px var(--accent-glow);
+}
+
+.carousel-btn.prev {
+    left: -25px;
+}
+
+.carousel-btn.next {
+    right: -25px;
+}
+
 .facility-card {
     background: var(--surface-color);
     border: 1px solid var(--border-color);
@@ -595,6 +656,12 @@ footer {
 
 /* Responsive Adjustments */
 @media (max-width: 991px) {
+    .facility-slide {
+        flex: 0 0 48%;
+        min-width: 48%;
+        max-width: 48%;
+    }
+    
     .facility-title {
         font-size: 1rem;
     }
@@ -602,9 +669,29 @@ footer {
     .facility-description {
         font-size: 0.85rem;
     }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .carousel-btn.prev {
+        left: -20px;
+    }
+    
+    .carousel-btn.next {
+        right: -20px;
+    }
 }
 
 @media (max-width: 767px) {
+    .facility-slide {
+        flex: 0 0 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+    
     .facility-card {
         margin-bottom: 1rem;
     }
@@ -620,6 +707,20 @@ footer {
     .facility-modal-close {
         top: -35px;
         font-size: 2rem;
+    }
+    
+    .carousel-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+    
+    .carousel-btn.prev {
+        left: 10px;
+    }
+    
+    .carousel-btn.next {
+        right: 10px;
     }
 }
 

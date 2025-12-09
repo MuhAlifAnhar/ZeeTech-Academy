@@ -4,105 +4,111 @@
 const facilitiesData = [
   {
     id: 1,
-    image: "assets/img/fasilitas1.jpg",
+    image: "assets/img/fasilitas (1).jpg",
     title: "Ruang Kelas Modern",
     description: "Kelas ber-AC dengan kapasitas maksimal 15 siswa untuk pembelajaran yang nyaman"
   },
   {
     id: 2,
-    image: "assets/img/fasilitas2.jpg",
+    image: "assets/img/fasilitas (2).jpg",
     title: "Komputer Spesifikasi Tinggi",
     description: "Setiap siswa mendapat 1 unit PC/Laptop dengan spesifikasi untuk development"
   },
   {
     id: 3,
-    image: "assets/img/fasilitas3.jpg",
+    image: "assets/img/fasilitas (3).jpg",
     title: "Internet Fiber 100 Mbps",
     description: "Koneksi internet super cepat untuk mendukung pembelajaran dan riset"
   },
   {
     id: 4,
-    image: "assets/img/fasilitas4.jpg",
+    image: "assets/img/fasilitas (4).jpg",
     title: "Proyektor HD",
     description: "Layar proyektor besar untuk presentasi dan live coding sessions"
   },
   {
     id: 5,
-    image: "assets/img/fasilitas5.jpg",
+    image: "assets/img/fasilitas (5).jpg",
     title: "Area Diskusi",
     description: "Ruang santai untuk diskusi kelompok dan brainstorming"
   },
   {
     id: 6,
-    image: "assets/img/fasilitas6.jpg",
+    image: "assets/img/fasilitas (6).jpg",
     title: "Perpustakaan Digital",
     description: "Akses ke ribuan e-book dan video tutorial premium"
   },
   {
     id: 7,
-    image: "assets/img/fasilitas7.jpg",
+    image: "assets/img/fasilitas (7).jpg",
     title: "Coffee Corner",
     description: "Kopi gratis dan snack untuk menemani belajar"
   },
   {
     id: 8,
-    image: "assets/img/fasilitas8.jpg",
+    image: "assets/img/fasilitas (8).jpg",
     title: "Free Parking",
     description: "Area parkir luas dan aman untuk motor dan mobil"
   },
   {
     id: 9,
-    image: "assets/img/fasilitas9.jpg",
+    image: "assets/img/fasilitas (9).jpg",
     title: "Whiteboard Digital",
     description: "Smart board untuk menjelaskan konsep dengan lebih interaktif"
   },
   {
     id: 10,
-    image: "assets/img/fasilitas10.jpg",
+    image: "assets/img/fasilitas (10).jpg",
     title: "Ruang Praktek",
     description: "Lab khusus untuk project-based learning"
   },
   {
     id: 11,
-    image: "assets/img/fasilitas11.jpg",
+    image: "assets/img/fasilitas (11).jpg",
     title: "Musholla",
     description: "Tempat ibadah yang nyaman untuk siswa muslim"
   },
   {
     id: 12,
-    image: "assets/img/fasilitas12.jpg",
+    image: "assets/img/fasilitas (12).jpg",
     title: "Toilet Bersih",
     description: "Fasilitas toilet yang selalu dijaga kebersihannya"
   },
   {
     id: 13,
-    image: "assets/img/fasilitas13.jpg",
+    image: "assets/img/fasilitas (13).jpg",
     title: "Security 24/7",
     description: "Keamanan terjaga dengan sistem CCTV dan petugas keamanan"
   }
 ];
 
-// Function untuk render facilities
+// Carousel state
+let currentIndex = 0;
+let autoScrollInterval;
+let isAnimating = false;
+
+// Function untuk render facilities carousel
 function renderFacilities() {
-  const facilitiesContainer = document.getElementById('facilities-container');
+  const facilitiesContainer = document.getElementById('facilities-track');
   
   if (!facilitiesContainer) {
-    console.error('Facilities container not found');
+    console.error('Facilities track not found');
     return;
   }
 
   facilitiesContainer.innerHTML = '';
 
-  facilitiesData.forEach((facility, index) => {
+  // Duplicate items untuk infinite loop effect
+  const allFacilities = [...facilitiesData, ...facilitiesData];
+
+  allFacilities.forEach((facility, index) => {
     const facilityCard = document.createElement('div');
-    facilityCard.className = 'col-lg-3 col-md-4 col-sm-6 col-12';
-    facilityCard.setAttribute('data-aos', 'zoom-in');
-    facilityCard.setAttribute('data-aos-delay', index * 50);
+    facilityCard.className = 'facility-slide';
 
     facilityCard.innerHTML = `
       <div class="facility-card">
         <div class="facility-image-wrapper">
-          <img src="${facility.image}" alt="${facility.title}" class="facility-image" loading="lazy">
+          <img src="${facility.image}" alt="${facility.title}" class="facility-image" loading="lazy" onerror="this.onerror=null; this.src='assets/img/placeholder.jpg';">
           <div class="facility-overlay">
             <div class="facility-icon">
               <i class="fas fa-search-plus"></i>
@@ -119,8 +125,119 @@ function renderFacilities() {
     facilitiesContainer.appendChild(facilityCard);
   });
 
+  // Initialize carousel
+  initializeCarousel();
+  
   // Add click event untuk zoom image
   addImageZoomEffect();
+}
+
+// Initialize carousel functionality
+function initializeCarousel() {
+  const track = document.getElementById('facilities-track');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  
+  if (!track) return;
+
+  // Set initial position
+  updateCarouselPosition();
+
+  // Auto scroll
+  startAutoScroll();
+
+  // Navigation buttons
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      if (!isAnimating) {
+        stopAutoScroll();
+        prevSlide();
+        startAutoScroll();
+      }
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      if (!isAnimating) {
+        stopAutoScroll();
+        nextSlide();
+        startAutoScroll();
+      }
+    });
+  }
+
+  // Pause on hover
+  const carousel = document.querySelector('.facilities-carousel');
+  if (carousel) {
+    carousel.addEventListener('mouseenter', stopAutoScroll);
+    carousel.addEventListener('mouseleave', startAutoScroll);
+  }
+}
+
+// Update carousel position
+function updateCarouselPosition(animate = true) {
+  const track = document.getElementById('facilities-track');
+  if (!track) return;
+
+  const slides = track.querySelectorAll('.facility-slide');
+  if (slides.length === 0) return;
+
+  // Calculate slide width (33.333% for 3 visible items + gap)
+  const slideWidth = 33.333;
+  const gap = 1.5; // 1.5% gap between slides
+  const offset = currentIndex * (slideWidth + gap);
+
+  if (animate) {
+    isAnimating = true;
+    track.style.transition = 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+  } else {
+    track.style.transition = 'none';
+  }
+
+  track.style.transform = `translateX(-${offset}%)`;
+
+  // Reset position for infinite loop
+  setTimeout(() => {
+    if (currentIndex >= facilitiesData.length) {
+      track.style.transition = 'none';
+      currentIndex = 0;
+      track.style.transform = `translateX(0%)`;
+    }
+    isAnimating = false;
+  }, animate ? 600 : 0);
+}
+
+// Next slide
+function nextSlide() {
+  currentIndex++;
+  updateCarouselPosition();
+}
+
+// Previous slide
+function prevSlide() {
+  if (currentIndex > 0) {
+    currentIndex--;
+  } else {
+    currentIndex = facilitiesData.length - 1;
+  }
+  updateCarouselPosition();
+}
+
+// Start auto scroll
+function startAutoScroll() {
+  stopAutoScroll(); // Clear any existing interval
+  autoScrollInterval = setInterval(() => {
+    nextSlide();
+  }, 3000); // Scroll every 3 seconds
+}
+
+// Stop auto scroll
+function stopAutoScroll() {
+  if (autoScrollInterval) {
+    clearInterval(autoScrollInterval);
+    autoScrollInterval = null;
+  }
 }
 
 // Function untuk zoom effect pada gambar
@@ -141,8 +258,9 @@ function addImageZoomEffect() {
       image.style.transform = 'scale(1)';
     });
 
-    // Optional: Add click to view full image
-    overlay.addEventListener('click', () => {
+    // Add click to view full image
+    overlay.addEventListener('click', (e) => {
+      e.stopPropagation();
       const imageSrc = image.src;
       openImageModal(imageSrc, card.querySelector('.facility-title').textContent);
     });
