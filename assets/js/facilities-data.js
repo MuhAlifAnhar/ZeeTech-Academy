@@ -13,7 +13,7 @@ const facilitiesData = [
     id: 2,
     image: "assets/img/fasilitas (2).jpg",
     title: "Ruang Belajar Ber-AC",
-    description: "Kelas berkapasitas 15 siswa dengan AC dan tata ruang yang rapi."
+    description: "Kelas berkapasitas 15+ siswa dengan AC dan tata ruang yang rapi."
   },
   {
     id: 3,
