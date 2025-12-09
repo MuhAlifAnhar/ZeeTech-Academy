@@ -140,29 +140,33 @@ function initializeCarousel() {
   
   if (!track) return;
 
-  // Set initial position
-  updateCarouselPosition();
+  // Set initial position without animation
+  updateCarouselPosition(false);
 
-  // Auto scroll
-  startAutoScroll();
+  // Start auto scroll after a short delay
+  setTimeout(() => {
+    startAutoScroll();
+  }, 500);
 
   // Navigation buttons
   if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
+    prevBtn.addEventListener('click', (e) => {
+      e.preventDefault();
       if (!isAnimating) {
         stopAutoScroll();
         prevSlide();
-        startAutoScroll();
+        setTimeout(startAutoScroll, 1000);
       }
     });
   }
 
   if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
+    nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
       if (!isAnimating) {
         stopAutoScroll();
         nextSlide();
-        startAutoScroll();
+        setTimeout(startAutoScroll, 1000);
       }
     });
   }
@@ -171,7 +175,17 @@ function initializeCarousel() {
   const carousel = document.querySelector('.facilities-carousel');
   if (carousel) {
     carousel.addEventListener('mouseenter', stopAutoScroll);
-    carousel.addEventListener('mouseleave', startAutoScroll);
+    carousel.addEventListener('mouseleave', () => {
+      setTimeout(startAutoScroll, 500);
+    });
+  }
+
+  // Pause on touch for mobile
+  if (carousel) {
+    carousel.addEventListener('touchstart', stopAutoScroll);
+    carousel.addEventListener('touchend', () => {
+      setTimeout(startAutoScroll, 2000);
+    });
   }
 }
 
@@ -183,14 +197,29 @@ function updateCarouselPosition(animate = true) {
   const slides = track.querySelectorAll('.facility-slide');
   if (slides.length === 0) return;
 
-  // Calculate slide width (33.333% for 3 visible items + gap)
-  const slideWidth = 33.333;
-  const gap = 1.5; // 1.5% gap between slides
+  // Get window width for responsive calculation
+  const windowWidth = window.innerWidth;
+  let slideWidth, gap;
+
+  if (windowWidth <= 767) {
+    // Mobile: 1 item
+    slideWidth = 100;
+    gap = 0;
+  } else if (windowWidth <= 991) {
+    // Tablet: 2 items
+    slideWidth = 48;
+    gap = 2;
+  } else {
+    // Desktop: 3 items
+    slideWidth = 32;
+    gap = 1.5;
+  }
+
   const offset = currentIndex * (slideWidth + gap);
 
   if (animate) {
     isAnimating = true;
-    track.style.transition = 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+    track.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
   } else {
     track.style.transition = 'none';
   }
@@ -203,9 +232,11 @@ function updateCarouselPosition(animate = true) {
       track.style.transition = 'none';
       currentIndex = 0;
       track.style.transform = `translateX(0%)`;
+      // Force reflow
+      void track.offsetWidth;
     }
     isAnimating = false;
-  }, animate ? 600 : 0);
+  }, animate ? 800 : 0);
 }
 
 // Next slide
@@ -228,8 +259,10 @@ function prevSlide() {
 function startAutoScroll() {
   stopAutoScroll(); // Clear any existing interval
   autoScrollInterval = setInterval(() => {
-    nextSlide();
-  }, 3000); // Scroll every 3 seconds
+    if (!isAnimating) {
+      nextSlide();
+    }
+  }, 3500); // Scroll every 3.5 seconds
 }
 
 // Stop auto scroll
