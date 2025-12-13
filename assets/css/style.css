@@ -426,6 +426,101 @@ footer {
     }
 }
 
+/* Testimonial Cards */
+.testimonial-card {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(139, 92, 246, 0.3);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+    border: 2px solid var(--border-color);
+}
+
+.testimonial-info h5 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+    color: var(--text-primary);
+}
+
+.testimonial-info span {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.testimonial-quote {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.testimonial-quote i {
+    color: #8B5CF6;
+    margin-right: 0.5rem;
+    opacity: 0.5;
+}
+
+/* Swiper Customization */
+.swiper-pagination-bullet {
+    background: var(--text-secondary);
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    background: #8B5CF6;
+    opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #8B5CF6;
+    background: rgba(255, 255, 255, 0.05);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: rgba(139, 92, 246, 0.2);
+    transform: scale(1.1);
+}
+
+.testimonial-slider {
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 /* =====================================
    Facilities Section Styles
    ===================================== */

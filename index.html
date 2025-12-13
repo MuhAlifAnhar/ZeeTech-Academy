@@ -65,6 +65,12 @@
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -474,92 +480,6 @@
       </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section
-      id="pricing"
-      class="section-padding"
-      style="background: rgba(255, 255, 255, 0.02)"
-    >
-      <div class="container">
-        <div class="section-title" data-aos="fade-up">
-          <h2>Investasi Belajar</h2>
-          <p>Pilih paket yang sesuai dengan kebutuhan Anda.</p>
-        </div>
-        <div class="row g-4 justify-content-center">
-          <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div class="pricing-card">
-              <h4>Basic</h4>
-              <div class="pricing-price">Rp 500k</div>
-              <p class="text-secondary">Per Modul Dasar</p>
-              <ul class="pricing-features">
-                <li><i class="fas fa-check"></i> Akses Materi Dasar</li>
-                <li><i class="fas fa-check"></i> 1x Sesi Konsultasi</li>
-                <li><i class="fas fa-check"></i> Sertifikat Penyelesaian</li>
-                <li class="text-secondary opacity-50">
-                  <i class="fas fa-times"></i> Proyek Portofolio
-                </li>
-              </ul>
-              <!-- <a href="#contact" class="btn btn-outline-custom w-100">
-                Pilih Paket
-              </a> -->
-              <a
-                href="course.html"
-                target="_blank"
-                class="btn btn-outline-custom w-100"
-              >
-                Pilih Paket
-              </a>
-            </div>
-          </div>
-          <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="pricing-card featured">
-              <div class="badge bg-primary mb-3">POPULAR</div>
-              <h4>Pro Bootcamp</h4>
-              <div class="pricing-price">Rp 2.5jt</div>
-              <p class="text-secondary">Full Stack Program</p>
-              <ul class="pricing-features">
-                <li><i class="fas fa-check"></i> Akses Materi Lengkap</li>
-                <li><i class="fas fa-check"></i> Live Mentoring Intensif</li>
-                <li><i class="fas fa-check"></i> 3+ Proyek Portofolio</li>
-                <li><i class="fas fa-check"></i> Career Support</li>
-              </ul>
-              <a href="#contact" class="btn btn-primary-custom w-100"
-                >Daftar Sekarang</a
-              >
-            </div>
-          </div>
-          <div
-            class="col-lg-4 col-md-6"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div class="pricing-card">
-              <h4>Corporate</h4>
-              <div class="pricing-price">Custom</div>
-              <p class="text-secondary">Untuk Tim & Perusahaan</p>
-              <ul class="pricing-features">
-                <li><i class="fas fa-check"></i> Kurikulum Disesuaikan</li>
-                <li><i class="fas fa-check"></i> Jadwal Fleksibel</li>
-                <li><i class="fas fa-check"></i> Laporan Progress</li>
-                <li><i class="fas fa-check"></i> Sertifikasi Resmi</li>
-              </ul>
-              <a href="#contact" class="btn btn-outline-custom w-100"
-                >Hubungi Kami</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Facilities Section -->
     <section id="facilities" class="section-padding">
       <div class="container">
@@ -599,8 +519,303 @@
       </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section-padding">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Testimoni Alumni</h2>
+          <p>
+            Berbagai testimoni dari alumni yang telah mengikuti kursus di
+            ZeeTech Academy.
+          </p>
+        </div>
+
+        <div class="swiper testimonial-slider" data-aos="fade-up">
+          <div class="swiper-wrapper">
+            <!-- Testimonial 1 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img
+                    src="https://placehold.co/100x100/2a2a2a/FFF?text=AH"
+                    alt="Ahmad Hidayat"
+                    class="testimonial-avatar"
+                  />
+                  <div class="testimonial-info">
+                    <h5>Ahmad Hidayat</h5>
+                    <span>Frontend Developer</span>
+                  </div>
+                </div>
+                <div class="testimonial-quote">
+                  <i class="fas fa-quote-left"></i>
+                  Materi yang diajarkan sangat relevan dengan kebutuhan
+                  industri. Mentornya sabar dan cara mengajarnya mudah dipahami
+                  bahkan untuk pemula.
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img
+                    src="https://placehold.co/100x100/2a2a2a/FFF?text=SR"
+                    alt="Siti Rahma"
+                    class="testimonial-avatar"
+                  />
+                  <div class="testimonial-info">
+                    <h5>Siti Rahma</h5>
+                    <span>UI/UX Designer</span>
+                  </div>
+                </div>
+                <div class="testimonial-quote">
+                  <i class="fas fa-quote-left"></i>
+                  Belajar UI/UX di sini membuka wawasan saya tentang design
+                  thinking. Sekarang saya sudah bekerja di salah satu startup
+                  unicorn Indonesia.
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img
+                    src="https://placehold.co/100x100/2a2a2a/FFF?text=BP"
+                    alt="Budi Pratama"
+                    class="testimonial-avatar"
+                  />
+                  <div class="testimonial-info">
+                    <h5>Budi Pratama</h5>
+                    <span>Fullstack Developer</span>
+                  </div>
+                </div>
+                <div class="testimonial-quote">
+                  <i class="fas fa-quote-left"></i>
+                  Bootcamp yang intensif dan menantang! Proyek portofolio yang
+                  saya buat selama kursus sangat membantu saat interview kerja.
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img
+                    src="https://placehold.co/100x100/2a2a2a/FFF?text=DN"
+                    alt="Dina Novita"
+                    class="testimonial-avatar"
+                  />
+                  <div class="testimonial-info">
+                    <h5>Dina Novita</h5>
+                    <span>Digital Marketer</span>
+                  </div>
+                </div>
+                <div class="testimonial-quote">
+                  <i class="fas fa-quote-left"></i>
+                  Saya belajar banyak strategi digital marketing yang praktis.
+                  Sangat membantu bisnis online shop saya berkembang pesat.
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img
+                    src="https://placehold.co/100x100/2a2a2a/FFF?text=RK"
+                    alt="Rizky Kurniawan"
+                    class="testimonial-avatar"
+                  />
+                  <div class="testimonial-info">
+                    <h5>Rizky Kurniawan</h5>
+                    <span>Mobile Developer</span>
+                  </div>
+                </div>
+                <div class="testimonial-quote">
+                  <i class="fas fa-quote-left"></i>
+                  Flutter course-nya mantap! Dari nol sampai bisa upload
+                  aplikasi ke Play Store. Recommended banget buat yang mau jadi
+                  mobile dev.
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img
+                    src="https://placehold.co/100x100/2a2a2a/FFF?text=TS"
+                    alt="Tiara Safitri"
+                    class="testimonial-avatar"
+                  />
+                  <div class="testimonial-info">
+                    <h5>Tiara Safitri</h5>
+                    <span>Freelance Graphic Designer</span>
+                  </div>
+                </div>
+                <div class="testimonial-quote">
+                  <i class="fas fa-quote-left"></i>
+                  Kelas desain grafisnya asik banget. Mentornya kreatif dan
+                  banyak kasih tips trik dunia freelance. Balik modal kursus
+                  cepet banget!
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 7 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img
+                    src="https://placehold.co/100x100/2a2a2a/FFF?text=AN"
+                    alt="Andi Nugroho"
+                    class="testimonial-avatar"
+                  />
+                  <div class="testimonial-info">
+                    <h5>Andi Nugroho</h5>
+                    <span>Network Engineer</span>
+                  </div>
+                </div>
+                <div class="testimonial-quote">
+                  <i class="fas fa-quote-left"></i>
+                  Materi Mikrotik sangat mendalam. Pas buat persiapan
+                  sertifikasi MTCNA. Fasilitas lab-nya juga oke punya.
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 8 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img
+                    src="https://placehold.co/100x100/2a2a2a/FFF?text=ML"
+                    alt="Maya Lestari"
+                    class="testimonial-avatar"
+                  />
+                  <div class="testimonial-info">
+                    <h5>Maya Lestari</h5>
+                    <span>Admin Staff</span>
+                  </div>
+                </div>
+                <div class="testimonial-quote">
+                  <i class="fas fa-quote-left"></i>
+                  Skill Excel saya meningkat drastis. Pekerjaan kantor jadi
+                  lebih efisien setelah tahu rumus-rumus advanced dan pivot
+                  table.
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 9 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img
+                    src="https://placehold.co/100x100/2a2a2a/FFF?text=FR"
+                    alt="Fajar Ramadhan"
+                    class="testimonial-avatar"
+                  />
+                  <div class="testimonial-info">
+                    <h5>Fajar Ramadhan</h5>
+                    <span>Software Engineer</span>
+                  </div>
+                </div>
+                <div class="testimonial-quote">
+                  <i class="fas fa-quote-left"></i>
+                  Lingkungan belajar yang suportif membuat saya semangat belajar
+                  coding. Teman-teman sekelas juga asik buat diskusi.
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 10 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img
+                    src="https://placehold.co/100x100/2a2a2a/FFF?text=NL"
+                    alt="Nurul Lathifah"
+                    class="testimonial-avatar"
+                  />
+                  <div class="testimonial-info">
+                    <h5>Nurul Lathifah</h5>
+                    <span>IT Support</span>
+                  </div>
+                </div>
+                <div class="testimonial-quote">
+                  <i class="fas fa-quote-left"></i>
+                  Terima kasih ZeeTech! Berkat pelatihan ini saya bisa switch
+                  career dari non-IT ke IT Support dengan percaya diri.
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 11 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img
+                    src="https://placehold.co/100x100/2a2a2a/FFF?text=RW"
+                    alt="Rudi Wijaya"
+                    class="testimonial-avatar"
+                  />
+                  <div class="testimonial-info">
+                    <h5>Rudi Wijaya</h5>
+                    <span>Content Creator</span>
+                  </div>
+                </div>
+                <div class="testimonial-quote">
+                  <i class="fas fa-quote-left"></i>
+                  Ilmu editing videonya daging semua! Sekarang channel YouTube
+                  saya makin berkembang berkat kualitas visual yang lebih baik.
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 12 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <img
+                    src="https://placehold.co/100x100/2a2a2a/FFF?text=DS"
+                    alt="Dewi Sartika"
+                    class="testimonial-avatar"
+                  />
+                  <div class="testimonial-info">
+                    <h5>Dewi Sartika</h5>
+                    <span>Web Developer</span>
+                  </div>
+                </div>
+                <div class="testimonial-quote">
+                  <i class="fas fa-quote-left"></i>
+                  Investasi terbaik untuk masa depan. Biaya kursus sangat
+                  terjangkau dibanding value yang didapatkan. Maju terus
+                  ZeeTech!
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Swiper Controls -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ Section -->
-    <section id="faq" class="section-padding">
+    <section
+      id="faq"
+      class="section-padding"
+      style="background: rgba(255, 255, 255, 0.02)"
+    >
       <div class="container">
         <div class="section-title" data-aos="fade-up">
           <h2>Pertanyaan Umum (FAQ)</h2>
@@ -900,6 +1115,7 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/course-data.js"></script>
     <script src="assets/js/facilities-data.js"></script>
