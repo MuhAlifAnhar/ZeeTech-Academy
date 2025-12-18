@@ -642,7 +642,329 @@ const coursesData = {
       currentPrice: "Rp 1.500.000",
       discount: "25%"
     }
+  },
+
+  "frontend-web-dev": {
+  id: "frontend-web-dev",
+  title: "Frontend Web Development with React.js",
+  badge: "POPULAR",
+  badgeIcon: "code",
+  badgeColor: "#22c55e",
+  description: "Fokus membangun tampilan website modern, interaktif, dan responsif menggunakan React.js sebagai library frontend paling populer saat ini.",
+  duration: "8 Pertemuan",
+  level: "Pemula - Intermediate",
+  alumni: "250+",
+  rating: "4.7/5",
+  projectCount: 3,
+
+  learningPoints: [
+    "HTML, CSS & JavaScript Fundamentals",
+    "Modern CSS & Responsive Design",
+    "JavaScript ES6+",
+    "React.js Fundamentals",
+    "Component & Props",
+    "State & Hooks",
+    "API Integration",
+    "Deployment Frontend App"
+  ],
+
+  aboutProgram: {
+    intro: "Program intensif 8 pertemuan yang dirancang untuk kamu yang ingin menjadi Frontend Web Developer dengan skill modern menggunakan React.js.",
+    industry: "Frontend Developer sangat dibutuhkan di industri digital, startup, dan software house. React.js menjadi standar industri untuk membangun UI yang cepat, scalable, dan reusable.",
+    whyChoose: [
+      "Build 3+ project frontend siap portfolio",
+      "Materi ringkas, padat, dan praktis",
+      "Mentor berpengalaman di web development",
+      "Belajar best practice industri",
+      "Cocok untuk mahasiswa & fresh graduate"
+    ]
+  },
+
+  curriculum: [
+    {
+      title: "Module 1: Web & JavaScript Fundamentals",
+      duration: "2 Pertemuan",
+      lessons: "10",
+      topics: [
+        "HTML Structure & Semantic HTML",
+        "CSS Basics & Layouting",
+        "Responsive Design",
+        "JavaScript Dasar",
+        "Project: Landing Page Responsive"
+      ]
+    },
+    {
+      title: "Module 2: Modern JavaScript & React Basics",
+      duration: "2 Pertemuan",
+      lessons: "12",
+      topics: [
+        "JavaScript ES6+",
+        "Intro React.js",
+        "Create React App / Vite",
+        "JSX & Component",
+        "Project: Simple React App"
+      ]
+    },
+    {
+      title: "Module 3: State, Hooks & API",
+      duration: "2 Pertemuan",
+      lessons: "12",
+      topics: [
+        "Props & State",
+        "React Hooks (useState, useEffect)",
+        "Fetch API / Axios",
+        "Conditional Rendering",
+        "Project: Product List with API"
+      ]
+    },
+    {
+      title: "Module 4: Final Project & Deployment",
+      duration: "2 Pertemuan",
+      lessons: "10",
+      topics: [
+        "Reusable Components",
+        "Basic Optimization",
+        "Deployment (Vercel / Netlify)",
+        "Portfolio Preparation",
+        "Final Project: Frontend Website React"
+      ]
+    }
+  ],
+
+  skills: [
+    "HTML", "CSS", "JavaScript", "React.js",
+    "Responsive Design", "REST API",
+    "Git", "UI Development"
+  ],
+
+  instructor: {
+    name: "Muh. Alif Anhar",
+    role: "Frontend Web Developer",
+    avatar: "MA",
+    bio: "Frontend Web Developer dengan pengalaman membangun berbagai website dan aplikasi berbasis React dan Laravel, serta aktif dalam pengembangan project edukasi dan komunitas."
+  },
+
+  pricing: {
+    originalPrice: "Rp 1.500.000",
+    currentPrice: "Rp 1.000.000",
+    discount: "25%"
   }
+},
+"backend-web-dev": {
+  id: "backend-web-dev",
+  title: "Backend Web Development with Node.js",
+  badge: "CORE SKILL",
+  badgeIcon: "server",
+  badgeColor: "#f59e0b",
+  description: "Kuasai logika server, pengelolaan database, dan pembuatan REST API menggunakan Node.js untuk aplikasi web yang scalable dan siap produksi.",
+  duration: "8 Pertemuan",
+  level: "Pemula - Intermediate",
+  alumni: "220+",
+  rating: "4.8/5",
+  projectCount: 3,
+
+  learningPoints: [
+    "Backend Web Fundamentals",
+    "Node.js & NPM",
+    "Express.js Framework",
+    "RESTful API Design",
+    "Database Design (SQL & NoSQL)",
+    "Authentication & Authorization",
+    "API Security & Best Practice",
+    "Backend Deployment"
+  ],
+
+  aboutProgram: {
+    intro: "Program intensif 8 pertemuan untuk mempelajari backend web development menggunakan Node.js. Cocok untuk kamu yang ingin membangun sistem backend yang kuat, aman, dan scalable.",
+    industry: "Backend Developer adalah tulang punggung aplikasi modern. Node.js banyak digunakan oleh startup dan perusahaan besar karena performanya yang tinggi dan ekosistem yang luas.",
+    whyChoose: [
+      "Build 3+ backend project siap portfolio",
+      "Belajar arsitektur backend modern",
+      "Mentor berpengalaman di pengembangan sistem",
+      "Studi kasus aplikasi nyata",
+      "Cocok untuk Frontend Dev yang ingin fullstack"
+    ]
+  },
+
+  curriculum: [
+    {
+      title: "Module 1: Backend & Node.js Fundamentals",
+      duration: "2 Pertemuan",
+      lessons: "10",
+      topics: [
+        "Intro Backend Development",
+        "Node.js Runtime & Event Loop",
+        "NPM & Package Management",
+        "Express.js Basics",
+        "Project: Simple REST API"
+      ]
+    },
+    {
+      title: "Module 2: Database & CRUD API",
+      duration: "2 Pertemuan",
+      lessons: "12",
+      topics: [
+        "Database Concept & Design",
+        "MySQL / PostgreSQL Basics",
+        "MongoDB Fundamentals",
+        "CRUD API Implementation",
+        "Project: API with Database"
+      ]
+    },
+    {
+      title: "Module 3: Authentication & Security",
+      duration: "2 Pertemuan",
+      lessons: "12",
+      topics: [
+        "JWT Authentication",
+        "User Registration & Login",
+        "Password Hashing",
+        "Role & Authorization",
+        "Project: Auth API System"
+      ]
+    },
+    {
+      title: "Module 4: Deployment & Best Practice",
+      duration: "2 Pertemuan",
+      lessons: "10",
+      topics: [
+        "Environment Variables",
+        "API Documentation (Postman / Swagger)",
+        "Error Handling & Logging",
+        "Deploy Backend (Railway / VPS)",
+        "Final Project: Backend Service Production-Ready"
+      ]
+    }
+  ],
+
+  skills: [
+    "Node.js", "Express.js", "REST API",
+    "MySQL", "PostgreSQL", "MongoDB",
+    "JWT", "Git", "API Security"
+  ],
+
+  instructor: {
+    name: "Muh. Alif Anhar",
+    role: "Backend Web Developer",
+    avatar: "MA",
+    bio: "Backend Developer dengan pengalaman membangun sistem web berbasis Node.js dan Laravel, fokus pada API, database design, dan arsitektur aplikasi yang scalable."
+  },
+
+  pricing: {
+    originalPrice: "Rp 1.500.000",
+    currentPrice: "Rp 1.000.000",
+    discount: "25%"
+  }
+},
+
+"wordpress-web-dev": {
+  id: "wordpress-web-dev",
+  title: "WordPress Web Development",
+  badge: "NO CODE",
+  badgeIcon: "wordpress",
+  badgeColor: "#2563eb",
+  description: "Membuat website profesional dengan WordPress tanpa coding rumit. Fokus pada kustomisasi tema, plugin, keamanan, dan optimasi SEO.",
+  duration: "8 Pertemuan",
+  level: "Pemula - Intermediate",
+  alumni: "300+",
+  rating: "4.9/5",
+  projectCount: 4,
+
+  learningPoints: [
+    "WordPress Fundamentals",
+    "Domain & Hosting Setup",
+    "Theme Installation & Customization",
+    "Plugin Management",
+    "Page Builder (Elementor)",
+    "SEO Optimization",
+    "Website Security & Backup",
+    "Website Deployment"
+  ],
+
+  aboutProgram: {
+    intro: "Program intensif 8 pertemuan untuk membangun website profesional menggunakan WordPress. Cocok untuk pemula, UMKM, freelancer, dan content creator.",
+    industry: "WordPress digunakan oleh lebih dari 40% website di dunia. Sangat diminati untuk pembuatan company profile, blog, landing page, dan website bisnis.",
+    whyChoose: [
+      "Build 4 website siap pakai",
+      "Tanpa coding rumit (no-code / low-code)",
+      "Cocok untuk UMKM & freelancer",
+      "Mentor praktisi web profesional",
+      "Fokus ke kebutuhan industri & klien"
+    ]
+  },
+
+  curriculum: [
+    {
+      title: "Module 1: WordPress & Hosting Basics",
+      duration: "2 Pertemuan",
+      lessons: "10",
+      topics: [
+        "Pengenalan WordPress",
+        "Domain & Hosting",
+        "Instalasi WordPress",
+        "Dashboard & Struktur WordPress",
+        "Project: Blog Personal"
+      ]
+    },
+    {
+      title: "Module 2: Theme & Page Builder",
+      duration: "2 Pertemuan",
+      lessons: "12",
+      topics: [
+        "Theme Gratis & Premium",
+        "Theme Customization",
+        "Elementor Basics",
+        "Responsive Layout",
+        "Project: Company Profile Website"
+      ]
+    },
+    {
+      title: "Module 3: Plugin, SEO & Security",
+      duration: "2 Pertemuan",
+      lessons: "12",
+      topics: [
+        "Plugin Wajib WordPress",
+        "SEO dengan Yoast / Rank Math",
+        "Optimasi Kecepatan Website",
+        "Security & Backup",
+        "Project: Landing Page Optimized SEO"
+      ]
+    },
+    {
+      title: "Module 4: Monetization & Deployment",
+      duration: "2 Pertemuan",
+      lessons: "10",
+      topics: [
+        "Contact Form & Integrasi WhatsApp",
+        "E-Commerce dengan WooCommerce",
+        "Maintenance Website",
+        "Website Migration",
+        "Final Project: Website Bisnis Profesional"
+      ]
+    }
+  ],
+
+  skills: [
+    "WordPress", "Elementor", "WooCommerce",
+    "SEO", "Website Security",
+    "Web Hosting", "UI Website",
+    "Website Optimization"
+  ],
+
+  instructor: {
+    name: "Muh. Alif Anhar",
+    role: "WordPress Developer",
+    avatar: "MA",
+    bio: "Berpengalaman membangun website WordPress untuk UMKM, organisasi, dan bisnis. Fokus pada website cepat, aman, SEO-friendly, dan siap digunakan klien."
+  },
+
+  pricing: {
+    originalPrice: "Rp 2.000.000",
+    currentPrice: "Rp 1.500.000",
+    discount: "25%"
+  }
+},
+
 };
 
 // Export untuk digunakan di file lain
