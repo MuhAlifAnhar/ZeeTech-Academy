@@ -644,104 +644,111 @@ const coursesData = {
     }
   },
 
-  "frontend-web-dev": {
+"frontend-web-dev": {
   id: "frontend-web-dev",
-  title: "Frontend Web Development with React.js",
+  title: "Frontend Web Development (React.js)",
   badge: "POPULAR",
   badgeIcon: "code",
   badgeColor: "#22c55e",
-  description: "Fokus membangun tampilan website modern, interaktif, dan responsif menggunakan React.js sebagai library frontend paling populer saat ini.",
+  description: "Pelatihan frontend berbasis project menggunakan React.js untuk membangun Website UMKM modern dengan pendekatan Single Page Application (SPA).",
   duration: "8 Pertemuan",
-  level: "Pemula - Intermediate",
+  level: "Pemula - Menengah",
   alumni: "250+",
   rating: "4.7/5",
-  projectCount: 3,
+  projectCount: 1,
 
   learningPoints: [
-    "HTML, CSS & JavaScript Fundamentals",
-    "Modern CSS & Responsive Design",
-    "JavaScript ES6+",
-    "React.js Fundamentals",
-    "Component & Props",
-    "State & Hooks",
-    "API Integration",
-    "Deployment Frontend App"
+    "Konsep Web Modern & SPA",
+    "Setup React dengan Vite",
+    "JSX & Functional Component",
+    "Props & Reusable Component",
+    "State & Interaksi UI",
+    "Styling & Responsive Design",
+    "Routing SPA",
+    "Fetch Data & API Integration",
+    "Form & Validasi Input",
+    "Build & Deployment Website"
   ],
 
   aboutProgram: {
-    intro: "Program intensif 8 pertemuan yang dirancang untuk kamu yang ingin menjadi Frontend Web Developer dengan skill modern menggunakan React.js.",
-    industry: "Frontend Developer sangat dibutuhkan di industri digital, startup, dan software house. React.js menjadi standar industri untuk membangun UI yang cepat, scalable, dan reusable.",
+    intro: "Program pelatihan Frontend Web Development (React.js) menggunakan pendekatan Project-Based Learning, di mana setiap pertemuan menghasilkan fitur nyata yang terintegrasi dalam satu Website UMKM.",
+    industry: "Peserta dilatih menggunakan React.js dan workflow Git & GitHub sebagai standar industri untuk membangun aplikasi frontend modern berbasis SPA.",
     whyChoose: [
-      "Build 3+ project frontend siap portfolio",
-      "Materi ringkas, padat, dan praktis",
-      "Mentor berpengalaman di web development",
-      "Belajar best practice industri",
-      "Cocok untuk mahasiswa & fresh graduate"
+      "Belajar melalui proyek Website UMKM nyata",
+      "Setiap pertemuan fokus menghasilkan fitur",
+      "Menggunakan Git & GitHub workflow",
+      "Live coding dan praktik langsung",
+      "Cocok untuk pemula hingga menengah"
     ]
   },
 
   curriculum: [
     {
-      title: "Module 1: Web & JavaScript Fundamentals",
+      title: "Module 1: Setup & Dasar React",
       duration: "2 Pertemuan",
-      lessons: "10",
+      lessons: "8",
       topics: [
-        "HTML Structure & Semantic HTML",
-        "CSS Basics & Layouting",
-        "Responsive Design",
-        "JavaScript Dasar",
-        "Project: Landing Page Responsive"
+        "Konsep Web Modern & SPA",
+        "Instal Node.js, Vite, React",
+        "Struktur Folder React",
+        "Git Init & GitHub",
+        "Project: Initial React UMKM Setup"
       ]
     },
     {
-      title: "Module 2: Modern JavaScript & React Basics",
+      title: "Module 2: JSX, Component & State",
       duration: "2 Pertemuan",
-      lessons: "12",
+      lessons: "8",
       topics: [
-        "JavaScript ES6+",
-        "Intro React.js",
-        "Create React App / Vite",
-        "JSX & Component",
-        "Project: Simple React App"
+        "JSX Syntax",
+        "Functional Component",
+        "Props & Reusable Component",
+        "useState & Event Handling",
+        "Project: Layout & UI Interaction"
       ]
     },
     {
-      title: "Module 3: State, Hooks & API",
+      title: "Module 3: Styling, Routing & API",
       duration: "2 Pertemuan",
-      lessons: "12",
+      lessons: "8",
       topics: [
-        "Props & State",
-        "React Hooks (useState, useEffect)",
-        "Fetch API / Axios",
-        "Conditional Rendering",
-        "Project: Product List with API"
+        "CSS Module / Tailwind",
+        "Responsive Layout",
+        "React Router",
+        "Fetch Data & useEffect",
+        "Project: Dynamic Product Page"
       ]
     },
     {
-      title: "Module 4: Final Project & Deployment",
+      title: "Module 4: Form, Finalisasi & Deployment",
       duration: "2 Pertemuan",
-      lessons: "10",
+      lessons: "8",
       topics: [
-        "Reusable Components",
-        "Basic Optimization",
-        "Deployment (Vercel / Netlify)",
-        "Portfolio Preparation",
-        "Final Project: Frontend Website React"
+        "Controlled Form",
+        "Validasi Input",
+        "LocalStorage",
+        "Build Production",
+        "Deploy ke Vercel / Netlify"
       ]
     }
   ],
 
   skills: [
-    "HTML", "CSS", "JavaScript", "React.js",
-    "Responsive Design", "REST API",
-    "Git", "UI Development"
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React.js",
+    "SPA",
+    "Responsive Design",
+    "Git",
+    "Frontend UI Development"
   ],
 
   instructor: {
-    name: "Muh. Alif Anhar",
+    name: "Muh. Amin Hidayat",
     role: "Frontend Web Developer",
     avatar: "MA",
-    bio: "Frontend Web Developer dengan pengalaman membangun berbagai website dan aplikasi berbasis React dan Laravel, serta aktif dalam pengembangan project edukasi dan komunitas."
+    bio: "Frontend Web Developer dengan pengalaman membangun aplikasi berbasis React.js serta aktif dalam pengembangan project edukasi dan komunitas."
   },
 
   pricing: {
