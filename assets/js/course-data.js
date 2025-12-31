@@ -643,7 +643,7 @@ const coursesData = {
       discount: "25%"
     }
   },
-
+//Front end web dev ini yak mas ALip
 "frontend-web-dev": {
   id: "frontend-web-dev",
   title: "Frontend Web Development (React.js)",
@@ -654,7 +654,7 @@ const coursesData = {
   duration: "8 Pertemuan",
   level: "Pemula - Menengah",
   alumni: "250+",
-  rating: "4.7/5",
+  rating: "4.9/5",
   projectCount: 1,
 
   learningPoints: [
@@ -757,104 +757,111 @@ const coursesData = {
     discount: "25%"
   }
 },
+//Backend Web ini yak
 "backend-web-dev": {
   id: "backend-web-dev",
-  title: "Backend Web Development with Node.js",
+  title: "Backend Web Development (Node.js)",
   badge: "CORE SKILL",
   badgeIcon: "server",
   badgeColor: "#f59e0b",
-  description: "Kuasai logika server, pengelolaan database, dan pembuatan REST API menggunakan Node.js untuk aplikasi web yang scalable dan siap produksi.",
+  description: "Pelatihan backend berbasis praktik untuk membangun REST API Website UMKM menggunakan Node.js dan Express.js.",
   duration: "8 Pertemuan",
-  level: "Pemula - Intermediate",
+  level: "Pemula - Menengah",
   alumni: "220+",
-  rating: "4.8/5",
-  projectCount: 3,
+  rating: "4.9/5",
+  projectCount: 1,
 
   learningPoints: [
-    "Backend Web Fundamentals",
-    "Node.js & NPM",
-    "Express.js Framework",
-    "RESTful API Design",
-    "Database Design (SQL & NoSQL)",
-    "Authentication & Authorization",
-    "API Security & Best Practice",
-    "Backend Deployment"
+    "Backend & REST API Fundamentals",
+    "Node.js & Express.js",
+    "Routing & HTTP Method",
+    "Request & Response JSON",
+    "Database Connection & Model",
+    "CRUD API Produk",
+    "Authentication & JWT",
+    "Middleware & Proteksi API",
+    "Integrasi API dengan Frontend",
+    "Deployment Backend & Dokumentasi API"
   ],
 
   aboutProgram: {
-    intro: "Program intensif 8 pertemuan untuk mempelajari backend web development menggunakan Node.js. Cocok untuk kamu yang ingin membangun sistem backend yang kuat, aman, dan scalable.",
-    industry: "Backend Developer adalah tulang punggung aplikasi modern. Node.js banyak digunakan oleh startup dan perusahaan besar karena performanya yang tinggi dan ekosistem yang luas.",
+    intro: "Program Backend Web Development (Node.js) berfokus pada praktik langsung dengan alokasi 30 menit teori inti dan 90 menit praktik coding di setiap pertemuan.",
+    industry: "Peserta membangun Backend API Website UMKM yang siap dikonsumsi oleh frontend React dan dideploy ke server publik.",
     whyChoose: [
-      "Build 3+ backend project siap portfolio",
-      "Belajar arsitektur backend modern",
-      "Mentor berpengalaman di pengembangan sistem",
-      "Studi kasus aplikasi nyata",
-      "Cocok untuk Frontend Dev yang ingin fullstack"
+      "Fokus praktik backend API nyata",
+      "Belajar membangun REST API dari nol",
+      "Terbiasa dengan Git & GitHub workflow",
+      "API siap diintegrasikan dengan frontend",
+      "Cocok untuk calon Fullstack Developer"
     ]
   },
 
   curriculum: [
     {
-      title: "Module 1: Backend & Node.js Fundamentals",
+      title: "Module 1: Setup Backend & Routing API",
       duration: "2 Pertemuan",
-      lessons: "10",
+      lessons: "8",
       topics: [
-        "Intro Backend Development",
-        "Node.js Runtime & Event Loop",
-        "NPM & Package Management",
-        "Express.js Basics",
-        "Project: Simple REST API"
+        "Pengenalan Backend & REST API",
+        "Instal Node.js & NPM",
+        "Setup Express.js",
+        "Struktur Folder Backend",
+        "Git Init & Initial Commit"
       ]
     },
     {
       title: "Module 2: Database & CRUD API",
       duration: "2 Pertemuan",
-      lessons: "12",
+      lessons: "8",
       topics: [
-        "Database Concept & Design",
-        "MySQL / PostgreSQL Basics",
-        "MongoDB Fundamentals",
-        "CRUD API Implementation",
-        "Project: API with Database"
+        "Konsep Database",
+        "Koneksi Database",
+        "Schema / Model Data",
+        "CRUD API Produk",
+        "Validasi Data"
       ]
     },
     {
-      title: "Module 3: Authentication & Security",
+      title: "Module 3: Authentication & API Lanjutan",
       duration: "2 Pertemuan",
-      lessons: "12",
+      lessons: "8",
       topics: [
-        "JWT Authentication",
-        "User Registration & Login",
-        "Password Hashing",
-        "Role & Authorization",
-        "Project: Auth API System"
+        "Login Admin",
+        "JWT Token",
+        "Middleware Auth",
+        "Proteksi Endpoint",
+        "API Pesanan / Kontak"
       ]
     },
     {
-      title: "Module 4: Deployment & Best Practice",
+      title: "Module 4: Integrasi & Deployment",
       duration: "2 Pertemuan",
-      lessons: "10",
+      lessons: "8",
       topics: [
-        "Environment Variables",
-        "API Documentation (Postman / Swagger)",
-        "Error Handling & Logging",
-        "Deploy Backend (Railway / VPS)",
-        "Final Project: Backend Service Production-Ready"
+        "CORS Configuration",
+        "Integrasi Frontend",
+        "Testing API",
+        "Deploy Backend",
+        "Dokumentasi Endpoint API"
       ]
     }
   ],
 
   skills: [
-    "Node.js", "Express.js", "REST API",
-    "MySQL", "PostgreSQL", "MongoDB",
-    "JWT", "Git", "API Security"
+    "Node.js",
+    "Express.js",
+    "REST API",
+    "Database",
+    "JWT Authentication",
+    "Git",
+    "Backend Deployment"
   ],
 
   instructor: {
     name: "Muh. Alif Anhar",
     role: "Backend Web Developer",
     avatar: "MA",
-    bio: "Backend Developer dengan pengalaman membangun sistem web berbasis Node.js dan Laravel, fokus pada API, database design, dan arsitektur aplikasi yang scalable."
+    bio: "Backend Developer dengan pengalaman membangun API berbasis Node.js dan Laravel, fokus pada database, autentikasi, dan arsitektur backend."
   },
 
   pricing: {
