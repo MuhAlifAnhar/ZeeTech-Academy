@@ -650,7 +650,7 @@ const coursesData = {
   badge: "POPULAR",
   badgeIcon: "code",
   badgeColor: "#22c55e",
-  description: "Pelatihan frontend berbasis project menggunakan React.js untuk membangun Website UMKM modern dengan pendekatan Single Page Application (SPA).",
+  description: "Pelatihan frontend berbasis project menggunakan React.js untuk membangun Website modern dengan pendekatan Single Page Application (SPA).",
   duration: "8 Pertemuan",
   level: "Pemula - Menengah",
   alumni: "250+",
@@ -671,10 +671,10 @@ const coursesData = {
   ],
 
   aboutProgram: {
-    intro: "Program pelatihan Frontend Web Development (React.js) menggunakan pendekatan Project-Based Learning, di mana setiap pertemuan menghasilkan fitur nyata yang terintegrasi dalam satu Website UMKM.",
+    intro: "Program pelatihan Frontend Web Development (React.js) menggunakan pendekatan Project-Based Learning, di mana setiap pertemuan menghasilkan fitur nyata yang terintegrasi dalam satu Website.",
     industry: "Peserta dilatih menggunakan React.js dan workflow Git & GitHub sebagai standar industri untuk membangun aplikasi frontend modern berbasis SPA.",
     whyChoose: [
-      "Belajar melalui proyek Website UMKM nyata",
+      "Belajar melalui proyek Website nyata",
       "Setiap pertemuan fokus menghasilkan fitur",
       "Menggunakan Git & GitHub workflow",
       "Live coding dan praktik langsung",
@@ -692,7 +692,7 @@ const coursesData = {
         "Instal Node.js, Vite, React",
         "Struktur Folder React",
         "Git Init & GitHub",
-        "Project: Initial React UMKM Setup"
+        "Project: Initial React Project Setup"
       ]
     },
     {
@@ -764,7 +764,7 @@ const coursesData = {
   badge: "CORE SKILL",
   badgeIcon: "server",
   badgeColor: "#f59e0b",
-  description: "Pelatihan backend berbasis praktik untuk membangun REST API Website UMKM menggunakan Node.js dan Express.js.",
+  description: "Pelatihan backend berbasis praktik untuk membangun REST API Website menggunakan Node.js dan Express.js.",
   duration: "8 Pertemuan",
   level: "Pemula - Menengah",
   alumni: "220+",
@@ -786,7 +786,7 @@ const coursesData = {
 
   aboutProgram: {
     intro: "Program Backend Web Development (Node.js) berfokus pada praktik langsung dengan alokasi 30 menit teori inti dan 90 menit praktik coding di setiap pertemuan.",
-    industry: "Peserta membangun Backend API Website UMKM yang siap dikonsumsi oleh frontend React dan dideploy ke server publik.",
+    industry: "Peserta membangun Backend API Website yang siap dikonsumsi oleh frontend React dan dideploy ke server publik.",
     whyChoose: [
       "Fokus praktik backend API nyata",
       "Belajar membangun REST API dari nol",
@@ -858,7 +858,7 @@ const coursesData = {
   ],
 
   instructor: {
-    name: "Muh. Alif Anhar",
+    name: "Muh. Amin Hidayat",
     role: "Backend Web Developer",
     avatar: "MA",
     bio: "Backend Developer dengan pengalaman membangun API berbasis Node.js dan Laravel, fokus pada database, autentikasi, dan arsitektur backend."
