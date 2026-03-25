@@ -643,105 +643,112 @@ const coursesData = {
       discount: "25%"
     }
   },
-
-  "frontend-web-dev": {
+//Front end web dev ini yak mas ALip
+"frontend-web-dev": {
   id: "frontend-web-dev",
-  title: "Frontend Web Development with React.js",
+  title: "Frontend Web Development (React.js)",
   badge: "POPULAR",
   badgeIcon: "code",
   badgeColor: "#22c55e",
-  description: "Fokus membangun tampilan website modern, interaktif, dan responsif menggunakan React.js sebagai library frontend paling populer saat ini.",
+  description: "Pelatihan frontend berbasis project menggunakan React.js untuk membangun Website modern dengan pendekatan Single Page Application (SPA).",
   duration: "8 Pertemuan",
-  level: "Pemula - Intermediate",
+  level: "Pemula - Menengah",
   alumni: "250+",
-  rating: "4.7/5",
-  projectCount: 3,
+  rating: "4.9/5",
+  projectCount: 1,
 
   learningPoints: [
-    "HTML, CSS & JavaScript Fundamentals",
-    "Modern CSS & Responsive Design",
-    "JavaScript ES6+",
-    "React.js Fundamentals",
-    "Component & Props",
-    "State & Hooks",
-    "API Integration",
-    "Deployment Frontend App"
+    "Konsep Web Modern & SPA",
+    "Setup React dengan Vite",
+    "JSX & Functional Component",
+    "Props & Reusable Component",
+    "State & Interaksi UI",
+    "Styling & Responsive Design",
+    "Routing SPA",
+    "Fetch Data & API Integration",
+    "Form & Validasi Input",
+    "Build & Deployment Website"
   ],
 
   aboutProgram: {
-    intro: "Program intensif 8 pertemuan yang dirancang untuk kamu yang ingin menjadi Frontend Web Developer dengan skill modern menggunakan React.js.",
-    industry: "Frontend Developer sangat dibutuhkan di industri digital, startup, dan software house. React.js menjadi standar industri untuk membangun UI yang cepat, scalable, dan reusable.",
+    intro: "Program pelatihan Frontend Web Development (React.js) menggunakan pendekatan Project-Based Learning, di mana setiap pertemuan menghasilkan fitur nyata yang terintegrasi dalam satu Website.",
+    industry: "Peserta dilatih menggunakan React.js dan workflow Git & GitHub sebagai standar industri untuk membangun aplikasi frontend modern berbasis SPA.",
     whyChoose: [
-      "Build 3+ project frontend siap portfolio",
-      "Materi ringkas, padat, dan praktis",
-      "Mentor berpengalaman di web development",
-      "Belajar best practice industri",
-      "Cocok untuk mahasiswa & fresh graduate"
+      "Belajar melalui proyek Website nyata",
+      "Setiap pertemuan fokus menghasilkan fitur",
+      "Menggunakan Git & GitHub workflow",
+      "Live coding dan praktik langsung",
+      "Cocok untuk pemula hingga menengah"
     ]
   },
 
   curriculum: [
     {
-      title: "Module 1: Web & JavaScript Fundamentals",
+      title: "Module 1: Setup & Dasar React",
       duration: "2 Pertemuan",
-      lessons: "10",
+      lessons: "8",
       topics: [
-        "HTML Structure & Semantic HTML",
-        "CSS Basics & Layouting",
-        "Responsive Design",
-        "JavaScript Dasar",
-        "Project: Landing Page Responsive"
+        "Konsep Web Modern & SPA",
+        "Instal Node.js, Vite, React",
+        "Struktur Folder React",
+        "Git Init & GitHub",
+        "Project: Initial React Project Setup"
       ]
     },
     {
-      title: "Module 2: Modern JavaScript & React Basics",
+      title: "Module 2: JSX, Component & State",
       duration: "2 Pertemuan",
-      lessons: "12",
+      lessons: "8",
       topics: [
-        "JavaScript ES6+",
-        "Intro React.js",
-        "Create React App / Vite",
-        "JSX & Component",
-        "Project: Simple React App"
+        "JSX Syntax",
+        "Functional Component",
+        "Props & Reusable Component",
+        "useState & Event Handling",
+        "Project: Layout & UI Interaction"
       ]
     },
     {
-      title: "Module 3: State, Hooks & API",
+      title: "Module 3: Styling, Routing & API",
       duration: "2 Pertemuan",
-      lessons: "12",
+      lessons: "8",
       topics: [
-        "Props & State",
-        "React Hooks (useState, useEffect)",
-        "Fetch API / Axios",
-        "Conditional Rendering",
-        "Project: Product List with API"
+        "CSS Module / Tailwind",
+        "Responsive Layout",
+        "React Router",
+        "Fetch Data & useEffect",
+        "Project: Dynamic Product Page"
       ]
     },
     {
-      title: "Module 4: Final Project & Deployment",
+      title: "Module 4: Form, Finalisasi & Deployment",
       duration: "2 Pertemuan",
-      lessons: "10",
+      lessons: "8",
       topics: [
-        "Reusable Components",
-        "Basic Optimization",
-        "Deployment (Vercel / Netlify)",
-        "Portfolio Preparation",
-        "Final Project: Frontend Website React"
+        "Controlled Form",
+        "Validasi Input",
+        "LocalStorage",
+        "Build Production",
+        "Deploy ke Vercel / Netlify"
       ]
     }
   ],
 
   skills: [
-    "HTML", "CSS", "JavaScript", "React.js",
-    "Responsive Design", "REST API",
-    "Git", "UI Development"
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React.js",
+    "SPA",
+    "Responsive Design",
+    "Git",
+    "Frontend UI Development"
   ],
 
   instructor: {
-    name: "Muh. Alif Anhar",
+    name: "Muh. Amin Hidayat",
     role: "Frontend Web Developer",
     avatar: "MA",
-    bio: "Frontend Web Developer dengan pengalaman membangun berbagai website dan aplikasi berbasis React dan Laravel, serta aktif dalam pengembangan project edukasi dan komunitas."
+    bio: "Frontend Web Developer dengan pengalaman membangun aplikasi berbasis React.js serta aktif dalam pengembangan project edukasi dan komunitas."
   },
 
   pricing: {
@@ -750,104 +757,111 @@ const coursesData = {
     discount: "25%"
   }
 },
+//Backend Web ini yak
 "backend-web-dev": {
   id: "backend-web-dev",
-  title: "Backend Web Development with Node.js",
+  title: "Backend Web Development (Node.js)",
   badge: "CORE SKILL",
   badgeIcon: "server",
   badgeColor: "#f59e0b",
-  description: "Kuasai logika server, pengelolaan database, dan pembuatan REST API menggunakan Node.js untuk aplikasi web yang scalable dan siap produksi.",
+  description: "Pelatihan backend berbasis praktik untuk membangun REST API Website menggunakan Node.js dan Express.js.",
   duration: "8 Pertemuan",
-  level: "Pemula - Intermediate",
+  level: "Pemula - Menengah",
   alumni: "220+",
-  rating: "4.8/5",
-  projectCount: 3,
+  rating: "4.9/5",
+  projectCount: 1,
 
   learningPoints: [
-    "Backend Web Fundamentals",
-    "Node.js & NPM",
-    "Express.js Framework",
-    "RESTful API Design",
-    "Database Design (SQL & NoSQL)",
-    "Authentication & Authorization",
-    "API Security & Best Practice",
-    "Backend Deployment"
+    "Backend & REST API Fundamentals",
+    "Node.js & Express.js",
+    "Routing & HTTP Method",
+    "Request & Response JSON",
+    "Database Connection & Model",
+    "CRUD API Produk",
+    "Authentication & JWT",
+    "Middleware & Proteksi API",
+    "Integrasi API dengan Frontend",
+    "Deployment Backend & Dokumentasi API"
   ],
 
   aboutProgram: {
-    intro: "Program intensif 8 pertemuan untuk mempelajari backend web development menggunakan Node.js. Cocok untuk kamu yang ingin membangun sistem backend yang kuat, aman, dan scalable.",
-    industry: "Backend Developer adalah tulang punggung aplikasi modern. Node.js banyak digunakan oleh startup dan perusahaan besar karena performanya yang tinggi dan ekosistem yang luas.",
+    intro: "Program Backend Web Development (Node.js) berfokus pada praktik langsung dengan alokasi 30 menit teori inti dan 90 menit praktik coding di setiap pertemuan.",
+    industry: "Peserta membangun Backend API Website yang siap dikonsumsi oleh frontend React dan dideploy ke server publik.",
     whyChoose: [
-      "Build 3+ backend project siap portfolio",
-      "Belajar arsitektur backend modern",
-      "Mentor berpengalaman di pengembangan sistem",
-      "Studi kasus aplikasi nyata",
-      "Cocok untuk Frontend Dev yang ingin fullstack"
+      "Fokus praktik backend API nyata",
+      "Belajar membangun REST API dari nol",
+      "Terbiasa dengan Git & GitHub workflow",
+      "API siap diintegrasikan dengan frontend",
+      "Cocok untuk calon Fullstack Developer"
     ]
   },
 
   curriculum: [
     {
-      title: "Module 1: Backend & Node.js Fundamentals",
+      title: "Module 1: Setup Backend & Routing API",
       duration: "2 Pertemuan",
-      lessons: "10",
+      lessons: "8",
       topics: [
-        "Intro Backend Development",
-        "Node.js Runtime & Event Loop",
-        "NPM & Package Management",
-        "Express.js Basics",
-        "Project: Simple REST API"
+        "Pengenalan Backend & REST API",
+        "Instal Node.js & NPM",
+        "Setup Express.js",
+        "Struktur Folder Backend",
+        "Git Init & Initial Commit"
       ]
     },
     {
       title: "Module 2: Database & CRUD API",
       duration: "2 Pertemuan",
-      lessons: "12",
+      lessons: "8",
       topics: [
-        "Database Concept & Design",
-        "MySQL / PostgreSQL Basics",
-        "MongoDB Fundamentals",
-        "CRUD API Implementation",
-        "Project: API with Database"
+        "Konsep Database",
+        "Koneksi Database",
+        "Schema / Model Data",
+        "CRUD API Produk",
+        "Validasi Data"
       ]
     },
     {
-      title: "Module 3: Authentication & Security",
+      title: "Module 3: Authentication & API Lanjutan",
       duration: "2 Pertemuan",
-      lessons: "12",
+      lessons: "8",
       topics: [
-        "JWT Authentication",
-        "User Registration & Login",
-        "Password Hashing",
-        "Role & Authorization",
-        "Project: Auth API System"
+        "Login Admin",
+        "JWT Token",
+        "Middleware Auth",
+        "Proteksi Endpoint",
+        "API Pesanan / Kontak"
       ]
     },
     {
-      title: "Module 4: Deployment & Best Practice",
+      title: "Module 4: Integrasi & Deployment",
       duration: "2 Pertemuan",
-      lessons: "10",
+      lessons: "8",
       topics: [
-        "Environment Variables",
-        "API Documentation (Postman / Swagger)",
-        "Error Handling & Logging",
-        "Deploy Backend (Railway / VPS)",
-        "Final Project: Backend Service Production-Ready"
+        "CORS Configuration",
+        "Integrasi Frontend",
+        "Testing API",
+        "Deploy Backend",
+        "Dokumentasi Endpoint API"
       ]
     }
   ],
 
   skills: [
-    "Node.js", "Express.js", "REST API",
-    "MySQL", "PostgreSQL", "MongoDB",
-    "JWT", "Git", "API Security"
+    "Node.js",
+    "Express.js",
+    "REST API",
+    "Database",
+    "JWT Authentication",
+    "Git",
+    "Backend Deployment"
   ],
 
   instructor: {
-    name: "Muh. Alif Anhar",
+    name: "Muh. Amin Hidayat",
     role: "Backend Web Developer",
     avatar: "MA",
-    bio: "Backend Developer dengan pengalaman membangun sistem web berbasis Node.js dan Laravel, fokus pada API, database design, dan arsitektur aplikasi yang scalable."
+    bio: "Backend Developer dengan pengalaman membangun API berbasis Node.js dan Laravel, fokus pada database, autentikasi, dan arsitektur backend."
   },
 
   pricing: {
