@@ -440,15 +440,20 @@
                 </div>
                 <p class="price-original mb-0" id="price-original">Rp 0</p>
                 <div class="price-tag" id="price-current">Rp 0</div>
-                <p class="text-secondary mb-0">
+                <p class="text-secondary mb-0" id="pricing-subtitle">
                   Promo Early Bird (tersisa 8 kursi)
                 </p>
 
-                <button class="btn-primary-custom my-3">
+                <a
+                  id="cta-register"
+                  href="https://wa.me/6285117529191?text=Halo%20admin%20ZeeTech%20Academy%2C%20saya%20tertarik%20mengikuti%20Course%20ZeeTech%20Academy.%20Mohon%20informasi%20mengenai%20kurikulum%2C%20jadwal%20belajar%2C%20dan%20biayanya.%20Terima%20kasih."
+                  class="btn-primary-custom my-3"
+                  target="_blank"
+                >
                   <i class="fas fa-shopping-cart me-2"></i>Daftar Sekarang
-                </button>
+                </a>
 
-                <ul class="features-list">
+                <ul class="features-list" id="sidebar-features">
                   <li><i class="fas fa-check"></i> Akses Materi Lifetime</li>
                   <li>
                     <i class="fas fa-check"></i>
@@ -459,14 +464,13 @@
                     <span id="project-count">0</span> Project Portofolio
                   </li>
                   <li><i class="fas fa-check"></i> Mentoring 1-on-1</li>
-                  <!-- <li><i class="fas fa-check"></i> Career Support</li> -->
                   <li><i class="fas fa-check"></i> Sertifikat Resmi</li>
-                  <!-- <li><i class="fas fa-check"></i> Job Placement Assist</li> -->
                   <li><i class="fas fa-check"></i> Komunitas Alumni</li>
                 </ul>
 
                 <div
                   class="mt-4 pt-3 border-top border-secondary border-opacity-25"
+                  id="sidebar-schedule"
                 >
                   <p class="text-secondary mb-2">
                     <i class="fas fa-calendar-alt me-2"></i
@@ -576,6 +580,11 @@
                 <li>
                   <a href="course.html?id=wordpress-web-dev"
                     >WordPress Web Dev</a
+                  >
+                </li>
+                <li>
+                  <a href="course.html?id=fundamental-programming"
+                    >Fundamental Pemrograman</a
                   >
                 </li>
               </ul>
@@ -852,6 +861,39 @@
       document.getElementById("duration-weeks").textContent = course.duration;
       document.getElementById("project-count").textContent =
         course.projectCount + "+";
+
+      // Handle Private Class sidebar
+      if (course.isPrivateClass) {
+        // Update subtitle
+        const subtitle = document.getElementById("pricing-subtitle");
+        subtitle.innerHTML = `<span style="color: #10b981; font-weight: 600;">${course.pricing.installment || ''}</span>`;
+
+        // Update CTA button text & link
+        const ctaBtn = document.getElementById("cta-register");
+        const courseName = encodeURIComponent(course.title);
+        ctaBtn.href = `https://wa.me/6285117529191?text=Halo%20admin%20ZeeTech%20Academy%2C%20saya%20tertarik%20mendaftar%20kelas%20privat%20${courseName}.%20Mohon%20informasi%20jadwal%20dan%20pembayarannya.%20Terima%20kasih.`;
+        ctaBtn.innerHTML = `<i class="fas fa-user-graduate me-2"></i>Daftar Kelas Privat Sekarang`;
+
+        // Update features list for private class
+        document.getElementById("sidebar-features").innerHTML = `
+          <li><i class="fas fa-check"></i> Akses Materi Lifetime</li>
+          <li><i class="fas fa-check"></i> ${course.duration} Privat (Online/Offline)</li>
+          <li><i class="fas fa-check"></i> Mentoring Eksklusif 1-on-1</li>
+          <li><i class="fas fa-check"></i> Jadwal Sangat Fleksibel</li>
+          <li><i class="fas fa-check"></i> Sertifikat Penyelesaian</li>
+        `;
+
+        // Update schedule section for private class
+        document.getElementById("sidebar-schedule").innerHTML = `
+          <p class="text-secondary mb-2">
+            <i class="fas fa-calendar-alt me-2"></i><strong>Jadwal Terdekat:</strong>
+          </p>
+          <p class="text-white mb-0">Mulai kapan saja (Sistem Kelas Privat)</p>
+          <p class="text-secondary mt-3">
+            <small><i class="fas fa-users me-2"></i>Sisa kuota mentor bulan ini: <strong style="color: #ef4444;">${course.mentorQuota} Siswa</strong></small>
+          </p>
+        `;
+      }
 
       // Update page title
       document.title = `${course.title} - ZeeTech Academy`;

@@ -965,6 +965,111 @@ const coursesData = {
   }
 },
 
+"fundamental-programming": {
+  id: "fundamental-programming",
+  title: "Fundamental Pemrograman & Database (Private Class)",
+  badge: "NEW RELEASE",
+  badgeIcon: "rocket",
+  badgeColor: "#ef4444",
+  description: "Kuasai fondasi utama menjadi seorang programmer. Pelajari cara berpikir komputasional, logika algoritma, dasar coding dengan PHP, dan pengelolaan database SQL dari nol.",
+  duration: "8 Pertemuan",
+  level: "Pemula (Zero to One)",
+  alumni: "Batch Perdana",
+  rating: "Eksklusif",
+  projectCount: 1,
+  isPrivateClass: true,
+  mentorQuota: 5,
+
+  learningPoints: [
+    "Pemahaman Logika Algoritma & Flowchart",
+    "Dasar Pemrograman menggunakan PHP",
+    "Pengenalan Web Server Lokal (XAMPP)",
+    "Struktur Data Fundamental (Array & Function)",
+    "Konsep Relational Database",
+    "Koneksi PHP ke MySQL & Query Dasar (CRUD)"
+  ],
+
+  aboutProgram: {
+    intro: "Program privat intensif selama 8 pertemuan ini dirancang khusus untuk Anda yang belum pernah menulis kode sama sekali (non-IT). Sebelum belajar membuat aplikasi web yang rumit, Anda harus memahami cara komputer berpikir.",
+    industry: "Kami menggunakan bahasa PHP, bahasa pemrograman web yang sangat populer dan menjadi fondasi utama sebelum Anda masuk ke framework industri (seperti Laravel). Anda akan belajar memecahkan masalah dengan algoritma yang efisien dan menyimpannya dalam database MySQL. Karena ini adalah kelas privat, jadwal dan kecepatan belajar akan disesuaikan sepenuhnya dengan Anda.",
+    whyChoose: [
+      "<strong>Fokus Penuh 1-on-1:</strong> Mentor hanya fokus pada Anda. Bebas bertanya tanpa ragu.",
+      "<strong>Pendekatan Logika:</strong> Kami mengajarkan \"cara berpikir\", bukan sekadar menghafal syntax.",
+      "<strong>Fondasi Industri Web:</strong> Menggunakan PHP yang sangat powerful dan terbukti paling banyak digunakan untuk pengembangan website di dunia kerja.",
+      "<strong>Jadwal Fleksibel:</strong> Atur jadwal pertemuan langsung dengan mentor Anda."
+    ]
+  },
+
+  curriculum: [
+    {
+      title: "Module 1: Pengantar Logika & Persiapan Environment",
+      duration: "2 Pertemuan",
+      lessons: "4",
+      topics: [
+        "Konsep Algoritma & Cara Berpikir Komputasional",
+        "Membuat Flowchart untuk Memecahkan Masalah",
+        "Instalasi XAMPP & VS Code",
+        "Menjalankan File PHP Pertama di Browser"
+      ]
+    },
+    {
+      title: "Module 2: Dasar Pemrograman PHP",
+      duration: "2 Pertemuan",
+      lessons: "6",
+      topics: [
+        "Aturan Sintaks PHP & Struktur Program",
+        "Variabel, Tipe Data & Operator",
+        "Logika Percabangan (If/Else/Switch)",
+        "Perulangan (For/While/Foreach)",
+        "Studi Kasus Latihan Logika"
+      ]
+    },
+    {
+      title: "Module 3: Array & Function",
+      duration: "2 Pertemuan",
+      lessons: "5",
+      topics: [
+        "Memahami Array (Index & Asosiatif)",
+        "Manipulasi Data dengan Array",
+        "Membuat Custom Function",
+        "Metode Pengiriman Data Sederhana (GET/POST)",
+        "Latihan: Mini Program dengan Array & Function"
+      ]
+    },
+    {
+      title: "Module 4: Database MySQL & Integrasi PHP",
+      duration: "2 Pertemuan",
+      lessons: "6",
+      topics: [
+        "Konsep Relational Database",
+        "Membuat Database & Tabel di phpMyAdmin",
+        "Query Dasar SQL (SELECT, INSERT, UPDATE, DELETE)",
+        "Koneksi PHP ke MySQL",
+        "Membuat Aplikasi CRUD Sederhana",
+        "Review & Penutupan"
+      ]
+    }
+  ],
+
+  skills: [
+    "PHP", "MySQL", "XAMPP", "Visual Studio Code", "Draw.io / Flowgorithm"
+  ],
+
+  instructor: {
+    name: "Tim Mentor ZeeTech Academy",
+    role: "Praktisi Industri & Mentor",
+    avatar: "ZT",
+    bio: "Praktisi industri yang sabar dan berpengalaman dalam menerjemahkan bahasa teknis menjadi analogi sederhana yang mudah dipahami orang awam."
+  },
+
+  pricing: {
+    originalPrice: "Rp 1.500.000",
+    currentPrice: "Rp 750.000",
+    discount: "50%",
+    installment: "Bisa dicicil 2x"
+  }
+},
+
 };
 
 // Export untuk digunakan di file lain
